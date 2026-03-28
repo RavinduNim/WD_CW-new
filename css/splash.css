@@ -1,40 +1,41 @@
 * {
-  box-sizing: border-box; 
-  margin: 0; 
-  padding: auto;                       
-
-.splash-html,
-.splash-body {
-  height: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .splash-body {
   margin: 0;
-  font-family: 'Jost', sans-serif;;
+  font-family: "Jost", sans-serif;
   color: #f5f5f0;
-  overflow: hidden;                       
+  overflow: hidden;
   background-color: #3e2c1c;
+  min-height: 100vh;
 }
 
 .splash-screen {
-  position: relative;                
-  height: 100%;
+  position: relative;
+  min-height: 100vh;
   width: 100%;
   display: flex;
-  flex-direction: column;                 /* dislay properties wala  lay off ek lassana krnna.*/
-  align-items: center;                    /* div 3 tiyenawa mge e kiynne coluum  3 tiyenwa  ewwa hariyt center tiyenna oni splash screen hema ekkma ganata madde tiyenne meka nis*/
+  flex-direction: column; /* dislay properties wala  lay off ek lassana krnna.*/
+  align-items: center; /* div 3 tiyenawa mge e kiynne coluum  3 tiyenwa  ewwa hariyt center tiyenna oni splash screen hema ekkma ganata madde tiyenne meka nis*/
   justify-content: center;
   background:
     linear-gradient(rgba(17, 17, 17, 0.62), rgba(0, 0, 0, 0.62)),
-    radial-gradient(circle at 30% 20%, rgba(93, 93, 93, 0.22), rgba(0, 0, 0, 0.7)),
-    url("splash-image.jpeg");
+    radial-gradient(
+      circle at 30% 20%,
+      rgba(93, 93, 93, 0.22),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("/images/splash-image.jpeg");
   background-size: cover;
   background-position: center;
 }
 
 .splash-content {
-  z-index: 10;                        
-  text-align: center;       
+  z-index: 10;
+  text-align: center;
   padding: 0 24px;
   max-width: 896px;
   margin-bottom: 32px;
@@ -42,7 +43,6 @@
   justify-content: center;
   color: #05ef3f;
 }
-
 
 .logo-pulse-glow2 {
   animation: pulseGlow 4s ease-in-out infinite;
@@ -75,18 +75,16 @@
   letter-spacing: -0.02em;
   margin: 0 0 16px;
   text-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
-  font-family: 'Jost', sans-serif;
-
+  font-family: "Jost", sans-serif;
 }
 .splash-mission {
-  font-family: serif;       
+  font-family: serif;
   font-style: italic;
   font-size: 1.125rem;
   color: rgba(245, 245, 240, 0.9);
   margin: 0 auto 48px;
   max-width: 640px;
   line-height: 1.7;
-
 }
 
 .loading {
@@ -114,7 +112,7 @@
 .countdown-text {
   margin: 0;
   font-size: 0.75rem;
-  text-transform: uppercase;         
+  text-transform: uppercase;
   letter-spacing: 0.32em;
   color: #11d442;
   font-weight: 700;
@@ -147,7 +145,7 @@
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 8px;
-  text-decoration: none;  
+  text-decoration: none;
   color: inherit;
   font-size: 0.75rem;
   font-weight: 600;
@@ -178,7 +176,6 @@
   }
 }
 
-
 @keyframes progress-bar {
   0% {
     width: 0%;
@@ -186,5 +183,4 @@
   100% {
     width: 100%;
   }
-}
 }
