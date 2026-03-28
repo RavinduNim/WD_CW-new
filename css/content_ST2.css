@@ -1,0 +1,109 @@
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    color: #fbfbfb;
+}
+
+.container {
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+main {
+    flex: 3;
+}
+aside {
+    flex: 1;
+    background-color: #f4f4f4;
+    padding: 25px;
+    border: 1px solid #ddd;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+section {
+    border: 1px solid #ddd;
+    background-color: #fafafa;
+    border-color: #030303;
+    background-color: antiquewhite;
+}
+
+.sec{
+    margin-top: 10px;
+    border-radius: 32px 32px 0px 0px;
+    border-color: #084805;
+    border-width: 2px;
+}
+
+
+.stud {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 0;
+    background-color: #084805;
+    color: white;
+    margin-top: 8px;
+}
+
+.top {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+}
+        
+.top a {
+    padding: 10px 20px; /* Adds padding for button-like feel */
+    background-color: #0b8e04; /* Button color */
+    color: white; /* Text color */
+    text-decoration: none; /* Removes underline */
+    border-radius: 20px; /* Rounds the corners */
+    font-size: 12px; /* Adjust font size */
+    font-weight: bold; /* Make the text stand out */
+}
+
+.top a:hover {
+    background-color: #b2beb2; /* Darker shade on hover */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+}
+
+
+.content-header-outer{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #162b15;
+    color: white;
+    border-radius: 30px 30px 0px 0px; 
+}
+
+.content-body-outer{
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    text-align: justify;
+    border-radius: 30px;
+}
+
+.content-img{
+    width: 60%;
+    height: auto;
+    border-radius: 20px;
+    
+}
+
+#sideText {
+    color: #162b15;
+}
