@@ -1,109 +1,136 @@
-    body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-h1, h2, h3 {
-    color: #fbfbfb;
+h1,
+h2,
+h3 {
+  color: #fbfbfb;
 }
 
 .container {
-    display: flex;
-    flex-direction: row-reverse;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 main {
-    flex: 3;
+  flex: 3;
+}
+
+.hero {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #084805 0%, #17c90e 100%);
+  border-radius: 15px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero h2 {
+  font-size: 3rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin: 0;
+  font-weight: bold;
 }
 aside {
-    flex: 1;
-    background-color: #f4f4f4;
-    padding: 25px;
-    border: 1px solid #ddd;
-    margin-right: 20px;
-    margin-top: 10px;
+  flex: 1;
+  background-color: #f4f4f4;
+  padding: 25px;
+  border: 1px solid #ddd;
+  margin-right: 20px;
+  margin-top: 10px;
 }
 section {
-    border: 1px solid #ddd;
-    background-color: #fafafa;
-    border-color: #030303;
-    background-color: antiquewhite;
+  border: 1px solid #ddd;
+  background-color: #fafafa;
+  border-color: #030303;
+  background-color: antiquewhite;
 }
 
-.sec{
-    margin-top: 10px;
-    border-radius: 32px 32px 0px 0px;
-    border-color: #084805;
-    border-width: 2px;
+.sec {
+  margin-top: 10px;
+  border-radius: 32px 32px 0px 0px;
+  border-color: #084805;
+  border-width: 2px;
 }
-
 
 .stud {
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    line-height: 0;
-    background-color: #084805;
-    color: white;
-    margin-top: 8px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 0;
+  background-color: #084805;
+  color: white;
+  margin-top: 8px;
 }
 
 .top {
-    position: fixed;
-    bottom: 5%;
-    right: 5%;
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
 }
-        
+
+.top.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .top a {
-    padding: 10px 20px; /* Adds padding for button-like feel */
-    background-color: #0b8e04; /* Button color */
-    color: white; /* Text color */
-    text-decoration: none; /* Removes underline */
-    border-radius: 20px; /* Rounds the corners */
-    font-size: 12px; /* Adjust font size */
-    font-weight: bold; /* Make the text stand out */
+  padding: 10px 20px;
+  background-color: #0b8e04;
+  color: white; 
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 .top a:hover {
-    background-color: #b2beb2; /* Darker shade on hover */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+  background-color: #b2beb2;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-
-.content-header-outer{
-    width: 100%;
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #162b15;
-    color: white;
-    border-radius: 30px 30px 0px 0px; 
+.content-header-outer {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #162b15;
+  color: white;
+  border-radius: 30px 30px 0px 0px;
 }
 
-.content-body-outer{
-    width: auto;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-    text-align: justify;
-    border-radius: 30px;
+.content-body-outer {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  text-align: justify;
+  border-radius: 30px;
 }
 
-.content-img{
-    width: 60%;
-    height: auto;
-    border-radius: 20px;
-    
+.content-img {
+  width: 60%;
+  height: auto;
+  border-radius: 20px;
 }
 
 #sideText {
-    color: #162b15;
+  color: #162b15;
 }
