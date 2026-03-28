@@ -20,6 +20,9 @@ body {
   color: white;
   margin-bottom: 60px;
 }
+h3{
+  font-weight: normal;
+}
 
 .hero-header {
   font-size: 70px;
