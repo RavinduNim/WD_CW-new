@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | Protect Life on Land</title>
+    <link rel="stylesheet" href="/css/global.css" />
+
+    <style>
+      /* Gallery page specific styles */
+      .gallery-intro {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .gallery-intro p {
+        max-width: 850px;
+        margin: 0 auto;
+      }
+
+      .thumbnail-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .thumbnail-card {
+        background-color: #ffffff;
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        cursor: pointer;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .thumbnail-card.hovered,
+      .thumbnail-card:hover,
+      .thumbnail-card:focus {
+        transform: translateY(-6px) scale(1.01);
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+        outline: 3px solid #95d5b2;
+        outline-offset: 3px;
+      }
+
+      .thumbnail-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        margin-bottom: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      .thumbnail-text {
+        padding: 1rem;
+      }
+
+      .thumbnail-text h3 {
+        margin-bottom: 0.5rem;
+      }
+
+      .gallery-note {
+        margin-top: 2rem;
+        background-color: #d8f3dc;
+        padding: 1rem 1.2rem;
+        border-radius: 12px;
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 2rem 1rem;
+      }
+
+      .modal-content {
+        background-color: #ffffff;
+        color: #1f2933;
+        max-width: 850px;
+        margin: 0 auto;
+        border-radius: 16px;
+        padding: 1.5rem;
+        position: relative;
+        box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+      }
+
+      .modal-content img {
+        width: 100%;
+        max-height: 380px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin-bottom: 1rem;
+      }
+
+      .close-btn {
+        position: absolute;
+        top: 15px;
+        right: 18px;
+        background-color: #b00020;
+        color: #ffffff;
+        border: none;
+        border-radius: 8px;
+        padding: 0.5rem 0.8rem;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      .close-btn:hover,
+      .close-btn:focus {
+        background-color: #7f0015;
+      }
+
+      .custom-controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin: 1rem 0;
+      }
+
+      .modal-description {
+        padding: 1rem;
+        border-radius: 12px;
+        background-color: #f8f9f4;
+      }
+
+      .action-tip {
+        margin-top: 1rem;
+        padding: 1rem;
+        background-color: #eef8ee;
+        border-radius: 10px;
+      }
+
+      #modalTitle {
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .custom-controls button {
+        background: linear-gradient(135deg, #2e7d32, #40916c);
+        color: #ffffff;
+        border: none;
+        border-radius: 8px;
+        padding: 0.7rem 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .custom-controls button:hover,
+      .custom-controls button:focus {
+        background: linear-gradient(135deg, #1b4332, #2e7d32);
+        transform: translateY(-2px);
+      }
+
+      .modal-description {
+        padding: 1.2rem;
+        border-radius: 12px;
+        background-color: #eef8ee;
+      }
+
+      @media (max-width: 600px) {
+        .custom-controls {
+          flex-direction: column;
+        }
+
+        .close-btn {
+          position: static;
+          margin-bottom: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ================= HEADER ================= -->
+    <header>
+      <div class="logo-area">
+        <img src="/images/logo.png" alt="Protect Life on Land logo" />
+        <div>
+          <h1>Protect Life on Land</h1>
+          <p>Practical action for forests, wildlife, and ecosystems</p>
+        </div>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+
+      <!-- Main navigation -->
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="/html/home.html">Home</a></li>
+          <li><a href="/html/gallery.html" class="active">Gallery</a></li>
+          <li><a href="/html/ais.html">Action Simulator</a></li>
+          <li><a href="/html/feedback.html">Feedback</a></li>
+          <li><a href="/html/team.html">Team</a></li>
+          <li><a href="/html/profile.html">User Profile</a></li>
+          <li><a href="/html/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Gallery intro section -->
+      <section class="gallery-intro reveal">
+        <h2 class="section-title">Interactive Nature Gallery</h2>
+        <p>
+          This gallery highlights important actions and environments connected
+          to Life on Land. Click on any image to explore its wider impact, learn
+          more about land protection, and customise the extended view.
+        </p>
+      </section>
+
+      <!-- Interactive thumbnail gallery -->
+      <section class="thumbnail-grid reveal">
+        <div
+          class="thumbnail-card reveal"
+          tabindex="0"
+          role="button"
+          aria-label="Open details about Reforestation Drives"
+          data-title="Reforestation Drives"
+          data-image="/images/gallery/reforestation.jpg"
+          data-alt="Volunteers planting trees during a reforestation event"
+          data-description="Reforestation helps recover damaged land, rebuild wildlife habitats, improve air quality, and reduce the long-term effects of land degradation. Student-led tree planting campaigns can make a meaningful contribution when combined with ongoing care and awareness."
+          data-tip="Action Tip: Join or organise a local tree planting event and help monitor young trees after planting."
+        >
+          <img
+            src="/images/gallery/reforestation.jpg"
+            alt="Volunteers planting trees during a reforestation event"
+          />
+          <div class="thumbnail-text">
+            <h3>Reforestation Drives</h3>
+            <p>
+              See how tree planting can restore damaged land and improve
+              biodiversity.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="thumbnail-card reveal"
+          tabindex="0"
+          role="button"
+          aria-label="Open details about Protecting Endangered Wildlife"
+          data-title="Protecting Endangered Wildlife"
+          data-image="/images/gallery/endangered-wildlife.jpg"
+          data-alt="Endangered animal in a protected natural habitat"
+          data-description="Protecting endangered wildlife means preserving habitats, reducing pollution, and increasing public awareness. When species disappear, ecosystems become less stable and more vulnerable to environmental stress."
+          data-tip="Action Tip: Support campaigns and organisations that protect wildlife habitats and reduce threats to biodiversity."
+        >
+          <img
+            src="/images/gallery/endangered-wildlife.jpg"
+            alt="Endangered animal in a protected natural habitat"
+          />
+          <div class="thumbnail-text">
+            <h3>Protecting Endangered Wildlife</h3>
+            <p>
+              Explore why wildlife protection is essential for healthy
+              ecosystems.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="thumbnail-card reveal"
+          tabindex="0"
+          role="button"
+          aria-label="Open details about Habitat Restoration Projects"
+          data-title="Habitat Restoration Projects"
+          data-image="/images/gallery/habitat-restoration.jpg"
+          data-alt="Community members restoring a natural habitat"
+          data-description="Habitat restoration projects rebuild natural areas damaged by pollution, waste, or human activity. These projects can restore soil health, improve water retention, and create safer spaces for plants and animals."
+          data-tip="Action Tip: Take part in clean-up and restoration work in parks, wetlands, or local green spaces."
+        >
+          <img
+            src="/images/gallery/habitat-restoration.jpg"
+            alt="Community members restoring a natural habitat"
+          />
+          <div class="thumbnail-text">
+            <h3>Habitat Restoration Projects</h3>
+            <p>
+              Learn how restoring ecosystems helps both nature and communities.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="thumbnail-card reveal"
+          tabindex="0"
+          role="button"
+          aria-label="Open details about Urban Green Spaces"
+          data-title="Urban Green Spaces"
+          data-image="/images/gallery/urban-green-space.jpg"
+          data-alt="Green park area inside an urban environment"
+          data-description="Urban green spaces improve biodiversity even in busy cities. Small parks, gardens, and planted school spaces provide shelter for birds and insects while making communities healthier and more sustainable."
+          data-tip="Action Tip: Encourage schools and neighbourhoods to create mini gardens, plant native species, and protect local green areas."
+        >
+          <img
+            src="/images/gallery/urban-green-space.jpg"
+            alt="Green park area inside an urban environment"
+          />
+          <div class="thumbnail-text">
+            <h3>Urban Green Spaces</h3>
+            <p>
+              Discover how greener cities can support life on land every day.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Customisation note -->
+      <section class="gallery-note reveal">
+        <h2>Explore and Personalise</h2>
+        <p>
+          After opening an image, you can customise the extended view by
+          changing its colour scheme or font style. These changes apply only
+          inside the expanded gallery content.
+        </p>
+      </section>
+    </main>
+
+    <!-- Modal / extended gallery view -->
+    <div class="modal" id="galleryModal" aria-hidden="true">
+      <div class="modal-content" id="modalContent">
+        <button
+          class="close-btn"
+          id="closeModal"
+          aria-label="Close extended gallery view"
+        >
+          Close
+        </button>
+
+        <img
+          id="modalImage"
+          src="/images/gallery/reforestation.jpg"
+          alt="Gallery preview image"
+        />
+        <h2 id="modalTitle">Gallery Title</h2>
+
+        <!-- JavaScript customisation controls -->
+        <div class="custom-controls">
+          <button type="button" id="themeDefault">Default Theme</button>
+          <button type="button" id="themeDark">Dark Theme</button>
+          <button type="button" id="themeNature">Nature Theme</button>
+          <button type="button" id="fontDefault">Default Font</button>
+          <button type="button" id="fontSerif">Serif Font</button>
+          <button type="button" id="fontMono">Mono Font</button>
+        </div>
+
+        <div class="modal-description" id="modalDescription">
+          <p></p>
+        </div>
+
+        <div class="action-tip" id="modalTip">
+          <p></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+      <div class="student-editors">
+        <h3>Page Editors</h3>
+        <ul>
+          <li><a href="/html/editor_ST1.html">Student 1</a></li>
+          <li><a href="/html/editor_ST2.html">Student 2</a></li>
+          <li><a href="/html/editor_ST3.html">Student 3</a></li>
+          <li><a href="/html/editor_ST4.html">Student 4</a></li>
+        </ul>
+      </div>
+
+      <p>&copy; 2026 Protect Life on Land | GREEN Team</p>
+    </footer>
+
+    <script src="/js/global.js"></script>
+    <script>
+      /* Gallery modal elements */
+      const thumbnailCards = document.querySelectorAll(".thumbnail-card");
+      const modal = document.getElementById("galleryModal");
+      const modalContent = document.getElementById("modalContent");
+      const modalImage = document.getElementById("modalImage");
+      const modalTitle = document.getElementById("modalTitle");
+      const modalDescription = document.querySelector("#modalDescription p");
+      const modalTip = document.querySelector("#modalTip p");
+      const closeModalButton = document.getElementById("closeModal");
+
+      function resetModalStyles() {
+        modalContent.style.backgroundColor = "#ffffff";
+        modalContent.style.color = "#1F2933";
+        document.getElementById("modalDescription").style.backgroundColor =
+          "#f8f9f4";
+        document.getElementById("modalDescription").style.color = "#1F2933";
+        document.getElementById("modalTip").style.backgroundColor = "#eef8ee";
+        document.getElementById("modalTip").style.color = "#1F2933";
+        modalContent.style.fontFamily = "Arial, Helvetica, sans-serif";
+      }
+
+      function openModal(card) {
+        modalImage.src = card.dataset.image;
+        modalImage.alt = card.dataset.alt;
+        modalTitle.textContent = card.dataset.title;
+        modalDescription.textContent = card.dataset.description;
+        modalTip.textContent = card.dataset.tip;
+
+        modal.style.display = "block";
+        modal.setAttribute("aria-hidden", "false");
+
+        resetModalStyles();
+      }
+
+      function closeModal() {
+        modal.style.display = "none";
+        modal.setAttribute("aria-hidden", "true");
+      }
+
+      /* Thumbnail interaction */
+      thumbnailCards.forEach((card) => {
+        card.addEventListener("mouseenter", () => {
+          card.classList.add("hovered");
+        });
+
+        card.addEventListener("mouseleave", () => {
+          card.classList.remove("hovered");
+        });
+
+        card.addEventListener("click", () => {
+          openModal(card);
+        });
+
+        card.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            openModal(card);
+          }
+        });
+      });
+
+      /* Modal close button */
+      closeModalButton.addEventListener("click", closeModal);
+
+      /* Close modal when clicking outside the content */
+      window.addEventListener("click", (event) => {
+        if (event.target === modal) {
+          closeModal();
+        }
+      });
+
+      /* Theme controls */
+      document.getElementById("themeDefault").addEventListener("click", () => {
+        modalContent.style.backgroundColor = "#ffffff";
+        modalContent.style.color = "#1F2933";
+        document.getElementById("modalDescription").style.backgroundColor =
+          "#f8f9f4";
+        document.getElementById("modalDescription").style.color = "#1F2933";
+        document.getElementById("modalTip").style.backgroundColor = "#eef8ee";
+        document.getElementById("modalTip").style.color = "#1F2933";
+      });
+
+      document.getElementById("themeDark").addEventListener("click", () => {
+        modalContent.style.backgroundColor = "#1B4332";
+        modalContent.style.color = "#ffffff";
+        document.getElementById("modalDescription").style.backgroundColor =
+          "#2d5a3d";
+        document.getElementById("modalDescription").style.color = "#ffffff";
+        document.getElementById("modalTip").style.backgroundColor = "#40634b";
+        document.getElementById("modalTip").style.color = "#ffffff";
+      });
+
+      document.getElementById("themeNature").addEventListener("click", () => {
+        modalContent.style.backgroundColor = "#f4f1de";
+        modalContent.style.color = "#283618";
+        document.getElementById("modalDescription").style.backgroundColor =
+          "#e9edc9";
+        document.getElementById("modalDescription").style.color = "#283618";
+        document.getElementById("modalTip").style.backgroundColor = "#ccd5ae";
+        document.getElementById("modalTip").style.color = "#283618";
+      });
+
+      /* Font controls */
+      document.getElementById("fontDefault").addEventListener("click", () => {
+        modalContent.style.fontFamily = "Arial, Helvetica, sans-serif";
+      });
+
+      document.getElementById("fontSerif").addEventListener("click", () => {
+        modalContent.style.fontFamily = "Georgia, 'Times New Roman', serif";
+      });
+
+      document.getElementById("fontMono").addEventListener("click", () => {
+        modalContent.style.fontFamily = "'Courier New', monospace";
+      });
+
+      /* Escape key closes modal */
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && modal.style.display === "block") {
+          closeModal();
+        }
+      });
+
+
+    </script>
+  </body>
+</html>

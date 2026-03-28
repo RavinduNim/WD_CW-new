@@ -22,10 +22,12 @@ function revealOnScroll() {
   });
 
   // Show go to top button when scrolled down
-  if (window.scrollY > 300) {
-    topButton.classList.add("show");
-  } else {
-    topButton.classList.remove("show");
+  if (topButton) {
+    if (window.scrollY > 300) {
+      topButton.classList.add("show");
+    } else {
+      topButton.classList.remove("show");
+    }
   }
 }
 
