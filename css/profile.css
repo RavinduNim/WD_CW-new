@@ -96,16 +96,7 @@ button.btn:hover {
     margin-bottom: 8px;
 }
 
-.menu-toggle {
-    display: none;
-    font-size: var(--font-large);
-    color: var(--white-color);
-    cursor: pointer;
-}
 
-@media (max-width: 768px) {
-        .menu-toggle {
-        display: block;
-    }
-}
+
+
 

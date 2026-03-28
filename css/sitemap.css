@@ -1,4 +1,4 @@
-@import url(ps.css);
+@import url(/css/global.css);
 
 svg {
     width: 100%;
@@ -30,22 +30,10 @@ svg {
     fill: var(--accent-color);
 }
 
-
-
 line {
     stroke: var(--text-color);
     stroke-width: 2;
 }
 
-.menu-toggle {
-    display: none;
-    font-size: var(--font-medium);
-    color: var(--white-color);
-    cursor: pointer;
-}
 
-@media (max-width: 768px) {
-        .menu-toggle {
-        display: block;
-    }
-}
+
