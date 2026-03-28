@@ -52,10 +52,6 @@ main {
 
 }
 
-.btn:hover {
-    background-color: red;
-}
-
 button{
     padding: 10px 16px;
     background-color: var(--primary-color);
@@ -67,7 +63,13 @@ button{
     font-weight: 600;
 }
 
-
+button.btn:hover {
+    background-color: var(--white-color) !important;
+    color: var(--primary-color);
+    background-image: none; /*global eke background img thibb. so to remove it*/
+    border: 3px solid var(--primary-color);
+ 
+}
 
 #profileOutput{
     display: grid;
