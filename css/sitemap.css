@@ -1,0 +1,51 @@
+@import url(ps.css);
+
+svg {
+    width: 100%;
+    height: auto;
+
+}
+.node rect {
+    fill: var(--accent-color);
+    stroke: var(--secondary-color);
+    stroke-width: 2;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+}
+.node text {
+    fill: var(--white-color);
+    font-weight: bold;
+    pointer-events: none;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+.node:hover rect, .node:focus rect {
+    fill: var(--white-color);
+    stroke-width: 2;
+    
+    
+}
+.node:hover text {
+    fill: var(--accent-color);
+}
+
+
+
+line {
+    stroke: var(--text-color);
+    stroke-width: 2;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: var(--font-medium);
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+        .menu-toggle {
+        display: block;
+    }
+}
