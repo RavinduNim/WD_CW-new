@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Protect Life on Land</title>
+    <link rel="stylesheet" href="/css/global.css" />
+    <style>
+      .hero {
+        background:
+          linear-gradient(rgba(27, 67, 50, 0.75), rgba(27, 67, 50, 0.75)),
+          url("images/home/forest-banner.jpg") center/cover no-repeat;
+        color: #ffffff;
+        text-align: center;
+        padding: 4rem 1.5rem;
+        border-radius: 14px;
+        margin-bottom: 2rem;
+      }
+
+      .hero h1 {
+        color: #ffffff;
+        font-size: 2.3rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero p {
+        max-width: 800px;
+        margin: 0 auto 1.5rem auto;
+        font-size: 1.05rem;
+      }
+
+      .mission-cards .card img {
+        height: 220px;
+        object-fit: cover;
+      }
+
+      .home-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.2rem;
+      }
+
+      .gallery-link {
+        display: block;
+        background-color: #ffffff;
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .gallery-link:hover,
+      .gallery-link:focus {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+      }
+
+      .gallery-link img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        margin-bottom: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      .gallery-text {
+        padding: 1rem;
+      }
+
+      .gallery-text h3 {
+        margin-bottom: 0.5rem;
+      }
+
+      .impact-strip {
+        background-color: #d8f3dc;
+        padding: 1.5rem;
+        border-radius: 12px;
+      }
+
+      .impact-strip ul {
+        margin-top: 0.8rem;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 1.5rem;
+        font-weight: bold;
+      }
+
+      .button {
+        display: inline-block;
+        background: linear-gradient(135deg, var(--secondary-color), #40916c);
+        color: #ffffff;
+        border: none;
+        border-radius: 8px;
+        padding: 0.75rem 1.2rem;
+        font-size: 1rem;
+        font-weight: bold;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .button:hover,
+      .button:focus {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+        color: #ffffff;
+        transform: translateY(-2px);
+      }
+
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.8rem;
+      }
+
+      .card {
+        background-color: #ffffff;
+        border-radius: 14px;
+        padding: 1.2rem;
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+        transition: all 0.3s ease;
+        overflow: hidden;
+        position: relative;
+        border: 1px solid #e5e7eb;
+      }
+
+      .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+      }
+
+      .card img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 0.8rem;
+        transition: transform 0.4s ease;
+      }
+
+      .card:hover img {
+        transform: scale(1.05);
+      }
+
+      .card h3 {
+        margin-bottom: 0.6rem;
+      }
+
+      .card p {
+        margin-bottom: 0.9rem;
+        font-size: 0.95rem;
+      }
+
+      .card ul {
+        margin-top: 0.5rem;
+        margin-left: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 0.6s ease;
+      }
+
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Shared header section -->
+    <header>
+      <div class="logo-area">
+        <img src="/images/logo.png" alt="Protect Life on Land logo" />
+        <div>
+          <h1>Protect Life on Land</h1>
+          <p>Practical action for forests, wildlife, and ecosystems</p>
+        </div>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+
+      <!-- Main navigation -->
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="/html/home.html" class="active">Home</a></li>
+          <li><a href="/html/gallery.html">Gallery</a></li>
+          <li><a href="/html/ais.html">Action Simulator</a></li>
+          <li><a href="/html/feedback.html">Feedback</a></li>
+          <li><a href="/html/team.html">Team</a></li>
+          <li><a href="/html/profile.html">User Profile</a></li>
+          <li><a href="/html/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Home page hero section -->
+      <section class="hero">
+        <h1>Protect Nature. Restore Habitats. Defend Life on Land.</h1>
+        <p>
+          Protect Life on Land is a student-focused website that encourages
+          practical action to protect forests, wildlife, biodiversity, and
+          natural habitats. Our aim is to inspire students and communities to
+          take simple, meaningful steps that help restore and protect life on
+          land.
+        </p>
+        <a href="#content-links" class="button">Explore Our Actions</a>
+      </section>
+
+      <!-- Mission cards section -->
+      <section class="mission-cards reveal">
+        <h2 class="section-title">Why Life on Land Matters</h2>
+
+        <div class="card-grid">
+          <article class="card reveal">
+            <img
+              src="/images/home/forest-protection.jpg"
+              alt="Healthy forest with tall trees and sunlight"
+            />
+            <h3>Protect Forests</h3>
+            <p>
+              Forests regulate climate, support biodiversity, and provide clean
+              air and water. When forests are destroyed, wildlife loses shelter
+              and communities lose natural protection.
+            </p>
+            <ul>
+              <li>
+                Support tree planting activities in schools and communities
+              </li>
+              <li>Reduce paper waste and choose recycled materials</li>
+              <li>Raise awareness about deforestation and land damage</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <img
+              src="/images/home/wildlife-protection.jpg"
+              alt="Wild deer standing in a natural habitat"
+            />
+            <h3>Save Wildlife</h3>
+            <p>
+              Animals depend on safe habitats to survive. Protecting wildlife
+              means reducing habitat loss, preventing pollution, and encouraging
+              responsible action that keeps ecosystems balanced.
+            </p>
+            <ul>
+              <li>Respect wildlife habitats and avoid harmful littering</li>
+              <li>
+                Promote campaigns against illegal hunting and habitat
+                destruction
+              </li>
+              <li>Support local biodiversity protection initiatives</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <img
+              src="/images/home/ecosystem-restoration.jpg"
+              alt="Volunteers planting young trees in a green area"
+            />
+            <h3>Restore Ecosystems</h3>
+            <p>
+              Damaged land can recover when people work together. Community
+              restoration projects can revive green spaces, improve soil
+              quality, and create healthier habitats for future generations.
+            </p>
+            <ul>
+              <li>Join clean-up and habitat restoration programmes</li>
+              <li>Create small green areas in schools or neighbourhoods</li>
+              <li>Encourage long-term care of restored land</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- Interactive gallery linking to all content pages -->
+      <section id="content-links" class="reveal">
+        <h2 class="section-title">Explore Our Focus Areas</h2>
+
+        <div class="home-gallery">
+          <a class="gallery-link reveal" href="/html/content_ST1.html">
+            <img
+              src="/images/home/content-forest.jpg"
+              alt="Rows of young trees planted for forest conservation"
+            />
+            <div class="gallery-text">
+              <h3>Forest Conservation</h3>
+              <p>
+                Discover how tree planting, forest care, and responsible
+                resource use help protect land.
+              </p>
+            </div>
+          </a>
+
+          <a class="gallery-link reveal" href="/html/content_ST2.html">
+            <img
+              src="/images/home/content-wildlife.jpg"
+              alt="Bird resting on a branch in a protected natural area"
+            />
+            <div class="gallery-text">
+              <h3>Wildlife Protection</h3>
+              <p>
+                Learn why protecting species and restoring habitats is essential
+                for biodiversity.
+              </p>
+            </div>
+          </a>
+
+          <a class="gallery-link reveal" href="/html/content_ST3.html">
+            <img
+              src="/images/home/content-community.jpg"
+              alt="Group of volunteers taking part in an environmental activity"
+            />
+            <div class="gallery-text">
+              <h3>Community Action</h3>
+              <p>
+                Explore how students and communities can work together through
+                volunteering and awareness.
+              </p>
+            </div>
+          </a>
+
+          <a class="gallery-link reveal" href="/html/content_ST4.html">
+            <img
+              src="/images/home/content-habits.jpg"
+              alt="Person caring for a small plant as part of sustainable living"
+            />
+            <div class="gallery-text">
+              <h3>Sustainable Habits</h3>
+              <p>
+                See how simple daily habits can reduce harm to ecosystems and
+                protect land resources.
+              </p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Final call to action -->
+      <section class="impact-strip reveal">
+        <h2>What Students Can Do Today</h2>
+        <p>
+          Protecting life on land does not always begin with large projects.
+          Small actions taken consistently by students and communities can
+          create a real positive impact.
+        </p>
+        <ul>
+          <li>Take part in tree planting and environmental clean-up events</li>
+          <li>Reduce waste and protect green spaces in your local area</li>
+          <li>
+            Educate others about biodiversity, forests, and habitat restoration
+          </li>
+        </ul>
+      </section>
+
+      <p class="top"><a href="#top">Go to Top</a></p>
+    </main>
+
+    <!-- Shared footer -->
+    <footer>
+      <div class="student-editors">
+        <h3>Page Editors</h3>
+        <ul>
+          <li><a href="/html/editor_ST1.html">Student 1</a></li>
+          <li><a href="/html/editor_ST2.html">Student 2</a></li>
+          <li><a href="/html/editor_ST3.html">Student 3</a></li>
+          <li><a href="/html/editor_ST4.html">Student 4</a></li>
+        </ul>
+      </div>
+
+      <p>&copy; 2026 Protect Life on Land | GREEN Team</p>
+    </footer>
+
+    <script src="/js/global.js"></script>
+  </body>
+</html>
