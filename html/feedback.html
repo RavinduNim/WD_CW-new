@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback System</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="../css/feedbackPage.css">
+
+    <!-- Chart.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- JS -->
+    <script defer src="../js/feedbackPage.js"></script>
+</head>
+
+<body>
+    <header>
+      <div class="logo-area">
+        <img src="/images/logo.png" alt="Protect Life on Land logo" />
+        <div>
+          <h1>Protect Life on Land</h1>
+          <p>Practical action for forests, wildlife, and ecosystems</p>
+        </div>
+      </div>
+
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="ais.html">Action Simulator</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="profile.html" class="active">User Profile</a></li>
+          <li><a href="sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </header>
+
+<main class="container">
+
+    <!-- ======== LEFT: FEEDBACK FORM ======== -->
+    <section class="form-section">
+        <h1>Submit Your Feedback</h1>
+        <p>Help us improve our service by sharing your thoughts.</p>
+
+        <form id="feedbackForm">
+
+            <!-- 1. Personal Information -->
+            <h3>1. Personal Information</h3>
+            <input type="text" id="fullName" placeholder="Enter your name" required>
+            <input type="email" id="emailAddress" placeholder="Enter your email" required>
+
+            <!-- 2. Website Feedback -->
+            <h3>2. Website Feedback</h3>
+
+            <label>First time visiting?</label>
+            <div class="radio-group">
+                <label><input type="radio" name="firstVisit" value="Yes"> Yes</label>
+                <label><input type="radio" name="firstVisit" value="No"> No</label>
+            </div>
+
+            <label>Website is easy to use?</label>
+            <div class="radio-group">
+                <label><input type="radio" name="informative" value="Yes"> Yes</label>
+                <label><input type="radio" name="informative" value="No"> No</label>
+            </div>
+
+            <!-- 3. Satisfaction Rating -->
+            <h3>3. Satisfaction Rating</h3>
+            <div class="star-rating">
+                <label><input type="radio" name="satisfactionRating" value="1"> ⭐</label>
+                <label><input type="radio" name="satisfactionRating" value="2"> ⭐⭐</label>
+                <label><input type="radio" name="satisfactionRating" value="3"> ⭐⭐⭐</label>
+                <label><input type="radio" name="satisfactionRating" value="4"> ⭐⭐⭐⭐</label>
+                <label><input type="radio" name="satisfactionRating" value="5"> ⭐⭐⭐⭐⭐</label>
+            </div>
+
+            <!-- 4. Feedback Type -->
+            <h3>4. What are you giving feedback on?</h3>
+            <select id="feedbackType">
+                <option value="">Select Option</option>
+                <option>Website Design</option>
+                <option>Performance</option>
+                <option>Content</option>
+                <option>Support</option>
+            </select>
+
+            <!-- 5. What did you like? -->
+            <h3>5. What did you like?</h3>
+            <div class="checkbox-group">
+                <label><input type="checkbox" value="UI"> UI Design</label>
+                <label><input type="checkbox" value="Speed"> Speed</label>
+                <label><input type="checkbox" value="Features"> Features</label>
+            </div>
+
+            <!-- 6. Recommendation -->
+            <h3>6. Would you recommend us?</h3>
+            <div class="radio-group">
+                <label><input type="radio" name="recommendServices" value="Yes"> Yes</label>
+                <label><input type="radio" name="recommendServices" value="No"> No</label>
+            </div>
+
+            <!-- 7. Additional Comments -->
+            <h3>7. Additional Comments</h3>
+            <textarea id="comments" placeholder="Write your feedback..."></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </section>
+
+    <!-- ======== RIGHT: DASHBOARD ======== -->
+    <section class="dashboard-section">
+
+        <h2>Feedback Dashboard</h2>
+
+        <!-- Info Cards -->
+        <div class="cards">
+            <div class="card">
+                <h4>Total Feedback</h4>
+                <p id="totalResponses">0</p>
+            </div>
+
+            <div class="card">
+                <h4>Average Rating</h4>
+                <p id="avgRating">0</p>
+            </div>
+
+            <div class="card">
+                <h4>Recommendations</h4>
+                <p id="recommendRate">0%</p>
+            </div>
+        </div>
+
+        <!-- Chart -->
+        <div class="chart-box">
+            <canvas id="ratingChart"></canvas>
+        </div>
+
+        <!-- Recent Feedback List -->
+        <div class="recent-feedback">
+            <h3>Recent Feedback</h3>
+            <div id="feedbackContainer"></div>
+        </div>
+
+    </section>
+
+</main>
+
+    <footer>
+      <div class="student-editors">
+        <h3>Page Editors</h3>
+        <ul class="">
+          <li><a href="#">Student 1</a></li>
+          <li><a href="/html/editor_ST2.html">Student 2</a></li>
+          <li><a href="#">Student 3</a></li>
+          <li><a href="#">Student 4</a></li>
+        </ul>
+      </div>
+      <p>&copy; 2026 Protect Life on Land | GREEN Team</p>
+    </footer>
+
+    <script src="/js/global.js"></script>
+    <script src="/js/profile.js"></script>
+
+</body>
+</html>
