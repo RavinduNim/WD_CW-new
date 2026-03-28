@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Protect Life on Land</title>
+    <link rel="stylesheet" href="ps.css">
+    <link rel="stylesheet" href="sitemap.css">
+
+</head>
+
+<body>
+
+    <!-- Shared header section -->
+    <header>
+        <div class="logo-area">
+            <img src="images/logo.png" alt="Protect Life on Land logo">
+            <div>
+                <h1>Protect Life on Land</h1>
+                <p>Practical action for forests, wildlife, and ecosystems</p>
+            </div>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+
+        <!-- Main navigation -->
+        <nav aria-label="Main navigation">
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="ais.html">Action Simulator</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="profile.html">User Profile</a></li>
+                <li><a href="sitemap.html" class="active">Sitemap</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <svg viewBox="0 0 800 300" role="img" aria-labelledby="sitemapTitle" class="svgContainer">
+            <title id="sitemapTitle">Life On Land's Sitemap</title>
+
+            <g class="node" tabindex="0" onclick="location.href='splashscreen.html'">
+                <rect x="322" y="20" rx="10" ry="10" width="110" height="20"></rect>
+                <text x="375" y="34" text-anchor="middle" alignment-baseline="midle">Splash Screen</text>
+                <title>Splash Screen</title>
+            </g>
+
+            <g class="node" tabindex="0" onclick="location.href='home.html'">
+                <rect x="347" y="70" re="10" ry="10" width="55" height="20"></rect>
+                <text x="375" y="80" text-anchor="middle" alignment-baseline="middle">Home</text>
+                <title>Home</title>
+            </g>
+
+            <g class="node" tabindex="0" onclick="location.href='gallery.html'">
+                <rect x="40" y="150" rx="10" ry="10" width="60" height="20"></rect>
+                <text x="70" y="161" text-anchor="middle" alignment-baseline="middle">Gallery</text>
+                <title>Gallery Page</title>
+            </g>
+
+            <g class="node" tabindex="0" onclick="location.href='ais.html'">
+                <rect x="175" y="150" rx="10" ry="10" width="50" height="20"></rect>
+                <text x="200" y="161" text-anchor="middle" alignment-baseline="middle">AIS</text>
+                <title>AIS</title>
+            </g>
+
+            <g class="node" tabindex="0" onclick="location.href='profile.html'">
+                <rect x="615" y="150" rx="10" ry="10" width="55" height="20"></rect>
+                <text x="642" y="160" text-anchor="middle" alignment-baseline="middle">Profile</text>
+                <title>User Profile</title>
+            </g>
+
+            <g class="node" tabindex="0" onclick="location.href='feedback.html'">
+                <rect x="310" y="150" rx="10" ry="10" width="80" height="20"></rect>
+                <text x="350" y="161" text-anchor="middle" alignment-baseline="middle">Feedback</text>
+                <title>Feedback Page</title>
+            </g>
+
+            <g class="node" tabindex="0" onclick="location.href='team.html'">
+                <rect x="475" y="150" rx="10" ry="10" width="50" height="20"></rect>
+                <text x="500" y="160" text-anchor="middle" alignment-baseline="middle">Team</text>
+                <title>Team Page</title>
+            </g>
+
+            <g class="node" tabindex="0" onclick="location.href='sitemap.html'">
+                <rect x="715" y="150" rx="10" ry="10" width="70" height="20"></rect>
+                <text x="750" y="161" text-anchor="middle" alignment-baseline="middle">Sitemap</text>
+                <title>Sitemap Page</title>
+            </g>
+
+
+            <line x1="375" y1="40" x2="375" y2="70" />
+            <line x1="375" y1="90" x2="375" y2="120" />
+            <line x1="70" y1="120" x2="750" y2="120" />
+            <line x1="71" y1="120" x2="71" y2="150" />
+            <line x1="200" y1="120" x2="200" y2="150" />
+            <line x1="350" y1="120" x2="350" y2="150" />
+            <line x1="500" y1="120" x2="500" y2="150" />
+            <line x1="640" y1="120" x2="640" y2="150" />
+            <line x1="750" y1="120" x2="750" y2="150" />
+
+
+        </svg>
+    </main>
+
+
+    <footer>
+        <p>&copy; 2026 Protect Life on Land | GREEN Team</p>
+        <p>
+            <a href="pageEditor_ST1.html">Page Editor</a> |
+            <a href="validation_ST1.html">Validation Page</a> |
+            <a href="pageEditor_ST1.html#accessibility">Content Page</a>
+        </p>
+
+    </footer>
+
+    <script>
+        /* Mobile menu */
+        const toggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        if (toggle && navLinks) {
+            toggle.addEventListener("click", () => {
+                navLinks.classList.toggle("show");
+            });
+        }
+
+    </script>
+
+</body>
+
+</html>
