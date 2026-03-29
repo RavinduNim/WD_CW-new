@@ -26,8 +26,10 @@ body {
 }
 
 .validation-hero p {
-    line-height: 1.7;
+    line-height: 1.8;
+    font-size: 1.05rem;
     margin: 0;
+    color: #ffffff;
 }
 
 .validation-nav,
@@ -126,9 +128,17 @@ body {
 }
 
 code {
+    background-color: rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+    padding: 0.15rem 0.45rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+.validation-card code,
+.validation-nav code {
     background-color: #f1f5f9;
-    padding: 0.1rem 0.35rem;
-    border-radius: 4px;
+    color: #1B4332;
 }
 
 .top-link {
@@ -162,5 +172,15 @@ code {
     .validation-nav,
     .validation-card {
         padding: 1.2rem;
+    }
+
+    .validation-hero h2,
+    .validation-nav h2,
+    .validation-card h2 {
+        font-size: 1.3rem;
+    }
+
+    .validation-hero p {
+        font-size: 1rem;
     }
 }
