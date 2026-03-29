@@ -25,7 +25,7 @@
         <ul class="nav-links">
           <li><a href="home.html">Home</a></li>
           <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="ais.html" class="active">Action Simulator</a></li>
+          <li><a href="ais.html">Action Simulator</a></li>
           <li><a href="feedback.html">Feedback</a></li>
           <li><a href="team.html">Team</a></li>
           <li><a href="profile.html">User Profile</a></li>
@@ -96,8 +96,8 @@
                   entry screen
                 </li>
                 <li>
-                  Developed <code>ais.html</code> — the TerraGuard SDG 15 Action
-                  Impact Simulator with a 3-column card grid
+                  Developed <code>ais.html</code> — Action Impact Simulator with
+                  a 6-column card grid
                 </li>
                 <li>
                   Developed <code>content_ST2.html</code> — Life on Land content
@@ -141,9 +141,9 @@
                 The splash screen (<code>splash.html</code>) is a standalone
                 full-screen page that acts as the entry point to the website
                 before the user reaches <code>home.html</code>. It displays the
-                website title, a short tagline, and an "Enter Site" button. I
-                used a <code>&lt;div&gt;</code> centred with Flexbox to position
-                the content in the middle of the viewport.
+                website title, a short tagline, and an "Skip Intro" button. I
+                used a html redirect meta tag to automatically send users to
+                <code>home.html</code>
               </p>
 
               <h3>CSS Techniques</h3>
@@ -151,8 +151,8 @@
                 I used embedded CSS to create a full-screen background with a
                 dark green overlay, a fade-in animation on the title and button
                 using <code>@keyframes</code>, and a smooth hover effect on the
-                enter button. I used <code>100vh</code> to make the page fill
-                the full browser height.
+                enter button. I used <code>100%</code> to make the page fill the
+                full browser height.
               </p>
 
               <h3>Design and Implementation Rationale</h3>
@@ -160,8 +160,8 @@
                 The splash screen was designed to make a strong first impression
                 while staying visually consistent with the green environmental
                 theme. I kept the layout minimal so users are immediately drawn
-                to the enter button. A small JavaScript redirect sends the user
-                to <code>home.html</code> when the button is clicked.
+                to the enter button. A small count down timer sends the user to
+                <code>home.html</code> when the button is clicked.
               </p>
             </section>
 
@@ -172,10 +172,9 @@
               <h3>HTML Structure</h3>
               <p>
                 The Action Impact Simulator (<code>ais.html</code>) is titled
-                "TerraGuard | SDG 15 Action Impact Simulator". It uses the
-                shared header and footer and adds a page-specific banner
-                followed by a card grid inside
-                <code>&lt;div class="ais-grid"&gt;</code>. Each card contains a
+                "Action Impact Simulator". It uses the shared header and footer
+                and adds a page-specific banner followed by a card grid inside
+                <code>&lt;div class="sec"&gt;</code>. Each card contains a
                 relevant image, a bold action title, and a short description of
                 the conservation benefit.
               </p>
@@ -187,17 +186,16 @@
               </p>
               <ul>
                 <li>
-                  CSS Grid with
-                  <code>grid-template-columns: repeat(3, 1fr)</code> for exactly
-                  3 cards per row
+                  CSS Grid with grid-template-columns for exactly 3 cards per
+                  row
                 </li>
                 <li>
-                  A dark nature background image with a semi-transparent
+                  A light nature background image with a semi-transparent
                   <code>rgba</code> overlay to keep text readable
                 </li>
                 <li>
                   Card hover effect using
-                  <code>transform: translateY(-5px)</code> and
+                  <code>transform: scale(1.05);</code> and
                   <code>box-shadow</code>
                 </li>
                 <li>
@@ -208,12 +206,12 @@
 
               <h3>Design and Implementation Rationale</h3>
               <p>
-                I chose a 3-column grid so all action cards display clearly
+                I can chose a 6-column so all action cards display clearly
                 without excessive scrolling. The dark blurred forest background
                 creates an immersive environment while the white cards on top
-                remain easy to read. Card titles use dark red
-                (<code>#8B0000</code>) to stand out clearly against the white
-                card background.
+                remain easy to read. Card border getting light green (<code
+                  >background-color: var(--border-light);</code
+                >) to stand out clearly against the white card background.
               </p>
             </section>
 
@@ -227,10 +225,9 @@
                 Land across six sections: Introduction, Importance of Trees,
                 Role of Animals, How Plants Help, Human Action, and Conclusion.
                 I used a two-column layout with a sticky sidebar on the left and
-                the main article content on the right, wrapped inside
-                <code>&lt;div class="s2-page container"&gt;</code>. Each section
-                has a unique <code>id</code> so sidebar links can jump directly
-                to it. A "Back to Top" anchor link is provided at the bottom.
+                the main article content on the right. Each section has a unique
+                <code>id</code> so sidebar links can jump directly to it. A
+                "Back to Top" anchor link is provided at the bottom.
               </p>
 
               <h3>CSS Techniques</h3>
@@ -363,9 +360,8 @@
               </p>
               <p>
                 On the content page, the sticky sidebar uses an
-                <code>aria-label</code> attribute to identify it as page section
-                navigation. A "Back to Top" link at the bottom of the content
-                area supports keyboard navigation through long pages.
+                <code> flex: 1;</code> attribute to identify it as page section
+                navigation. A "Back to Top" link through golable js file.
               </p>
               <p>I also applied the following practices across my pages:</p>
               <ul>
