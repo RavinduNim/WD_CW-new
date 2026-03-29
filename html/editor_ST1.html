@@ -109,7 +109,14 @@
 
         .meeting-table {
             overflow-x: auto;
+            table-layout: fixed;
         }
+         th,td {
+            padding: 0.75rem;
+            text-align: left;
+            border: #1B4332 solid 1px;
+        }
+
 
         .note-box {
             background-color: #eef8ee;
@@ -505,8 +512,8 @@
                     </p>
 
                     <div class="meeting-table">
-                        <table>
-                            <thead>
+                        <table style="border-collapse: collapse;">
+                            <thead style="background-color: #608375">
                                 <tr>
                                     <th>Meeting</th>
                                     <th>Date & Time</th>
@@ -515,55 +522,84 @@
                                     <th>Attended</th>
                                     <th>My Individual Contribution</th>
                                 </tr>
-                            </thead>
-                            <tbody>
+                             </thead>
+                             <tbody>
                                 <tr>
                                     <td>1</td>
-                                    <td>05 Feb 2026, 4:00 PM</td>
-                                    <td>Face-to-face</td>
-                                    <td>Choose SDG and assign group roles</td>
+                                    <td>2026/2/12 9.00 pm - 9.45 pm</td>
+                                    <td>Online</td>
+                                    <td>Choose SDG topic and assigning roles</td>
                                     <td>Yes</td>
-                                    <td>I agreed to take Student 1 responsibilities and suggested the website title “Protect Life on Land”.</td>
+                                    <td>
+                                        I actively participated in the initial team meeting, contributed ideas during the topic discussion,
+                                        and took part in deciding how the project work should be allocated among team members. I also shared
+                                        suggestions for potential project topics and participated in the discussion that helped the team
+                                        shortlist three topics for further evaluation.
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>2</td>
-                                    <td>09 Feb 2026, 7:30 PM</td>
+                                    <td>2026/2/18 9.00 pm - 9.30 pm</td>
                                     <td>Online</td>
-                                    <td>Discuss design direction and colour palette</td>
+                                    <td>Designing the project and Initial Development Planning</td>
                                     <td>Yes</td>
-                                    <td>I proposed the green-based colour palette, overall card layout, and shared navigation structure.</td>
+                                    <td>
+                                        I participated in the review of the previous meeting and confirmed the shortlisted topics and task
+                                        allocations with the team. I also contributed to the design discussion by sharing ideas on the colour
+                                        palette, theme selection, and font choices, helping the team agree on the initial design direction
+                                        for the project.
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>3</td>
-                                    <td>14 Feb 2026, 6:00 PM</td>
-                                    <td>Hybrid</td>
-                                    <td>Plan the shared template and folder structure</td>
+                                    <td>2026/2/28 11.00 am - 12.00 pm</td>
+                                    <td>Physical</td>
+                                    <td>Establishing Repository and Branching Strategy</td>
                                     <td>Yes</td>
-                                    <td>I explained the required file names from the brief and prepared the shared HTML structure and CSS approach.</td>
+                                    <td>
+                                        I participated in the discussion on setting up the centralized Git repository and confirming the
+                                        platform for version control. I also contributed to planning the branching strategy, where we agreed
+                                        to create branches according to the tasks assigned to each team member, while maintaining main and
+                                        development branches for stable integration and collaborative development.
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>4</td>
-                                    <td>20 Feb 2026, 8:00 PM</td>
-                                    <td>Online</td>
-                                    <td>Review progress on assigned pages</td>
+                                    <td>2026/3/07 11.00 am - 12.00 pm</td>
+                                    <td>Physical</td>
+                                    <td>Development of Home Page</td>
                                     <td>Yes</td>
-                                    <td>I showed the first draft of the Home page and gave feedback to other members about keeping the shared structure consistent.</td>
+                                    <td>
+                                        I worked on developing the Home page using the shared HTML template and global CSS.
+                                        I implemented the hero section, mission cards, and interactive content area linking to
+                                        all student pages. I ensured the layout was responsive and consistent with the overall
+                                        design structure agreed by the team.
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>5</td>
-                                    <td>27 Feb 2026, 5:30 PM</td>
-                                    <td>Face-to-face</td>
-                                    <td>Check page integration and internal links</td>
+                                    <td>2026/3/14 11.00 am - 12.00 pm</td>
+                                    <td>Physical</td>
+                                    <td>Development of Gallery Page</td>
                                     <td>Yes</td>
-                                    <td>I tested navigation links, checked active page styling, and suggested improvements for consistency across pages.</td>
+                                    <td>
+                                        I developed the Gallery page with four interactive thumbnail cards and implemented
+                                        JavaScript functionality to display content in a modal view. I added keyboard
+                                        accessibility features and ensured that the gallery meets the coursework requirements
+                                        for interactivity and usability.
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>6</td>
-                                    <td>06 Mar 2026, 7:00 PM</td>
+                                    <td>2026/3/28 9.30 pm - 10.30 pm</td>
                                     <td>Online</td>
-                                    <td>Prepare final content and validation plan</td>
+                                    <td>Final Fixes and Repository Updates</td>
                                     <td>Yes</td>
-                                    <td>I reported on the Home, Gallery, and Content page progress and planned validation evidence and final fixes for my pages.</td>
+                                    <td>
+                                        I reviewed my implemented pages and fixed minor issues related to layout, styling,
+                                        and validation. I updated the code accordingly and pushed the final changes to the
+                                        Git repository, ensuring all files were properly structured and up to date for final submission.
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
