@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page Editor ST3 | Protect Life on Land</title>
-
     <link rel="stylesheet" href="../css/global.css" />
     <link rel="stylesheet" href="../css/editor_ST3.css" />
 </head>
@@ -39,20 +38,18 @@
             <h2>Page Editor ST3</h2>
             <p>
                 This page presents the work completed for Student 3, including the pages
-                developed, the technical decisions made, and the supporting validation work.
+                developed, validation results, and technical decisions made during the project.
             </p>
         </section>
 
         <div class="editor-layout">
-
             <aside class="editor-nav">
                 <h2>Contents</h2>
                 <ul>
                     <li><a href="#overview">Overview</a></li>
-                    <li><a href="#completed-tasks">Completed Tasks</a></li>
-                    <li><a href="#technical-description">Technical Description</a></li>
+                    <li><a href="#tasks">Completed Tasks</a></li>
+                    <li><a href="#technical">Technical Description</a></li>
                     <li><a href="#validation">Validation</a></li>
-                    <li><a href="#challenges">Challenges and Lessons Learned</a></li>
                     <li><a href="#accessibility">Accessibility</a></li>
                     <li><a href="#compliance">Compliance</a></li>
                     <li><a href="#references">References</a></li>
@@ -60,25 +57,22 @@
             </aside>
 
             <div class="editor-main">
-
                 <section class="editor-section" id="overview">
                     <h2>Overview</h2>
                     <p>
-                        I contributed to the design and development of the Student 3 pages for
-                        the Protect Life on Land website. My work focused on building clear,
-                        user-friendly content pages and maintaining a consistent visual style
-                        aligned with the group theme.
+                        I contributed to the development of Student 3 pages for the
+                        Protect Life on Land website. My work focused on creating a clear
+                        content structure, responsive layout, and accessible page design.
                     </p>
                 </section>
 
-                <section class="editor-section" id="completed-tasks">
+                <section class="editor-section" id="tasks">
                     <h2>Completed Tasks</h2>
                     <ul>
-                        <li>Designed and developed the assigned content page.</li>
-                        <li>Structured the page using semantic HTML elements.</li>
-                        <li>Styled the page using an external CSS file.</li>
-                        <li>Made the page responsive for smaller screen sizes.</li>
-                        <li>Validated HTML and corrected heading hierarchy issues.</li>
+                        <li>Designed and developed the Student 3 content page.</li>
+                        <li>Applied consistent styling using an external CSS file.</li>
+                        <li>Implemented a responsive layout for different screen sizes.</li>
+                        <li>Validated the HTML structure and fixed heading hierarchy issues.</li>
                     </ul>
 
                     <div class="quick-links">
@@ -87,70 +81,61 @@
                     </div>
                 </section>
 
-                <section class="editor-section" id="technical-description">
+                <section class="editor-section" id="technical">
                     <h2>Technical Description</h2>
 
                     <h3>HTML Structure</h3>
                     <p>
                         Semantic elements such as <code>header</code>, <code>nav</code>,
                         <code>main</code>, <code>section</code>, <code>aside</code>, and
-                        <code>footer</code> were used to improve structure and readability.
+                        <code>footer</code> were used to create a meaningful structure.
                     </p>
 
                     <h3>CSS Styling</h3>
                     <p>
-                        CSS Grid was used for the page layout, while reusable classes were used
-                        to style content sections, quick links, and information boxes.
+                        CSS Grid was used for the page layout, while reusable classes were
+                        added to style the navigation, sections, quick links, and notes.
                     </p>
 
                     <h3>Responsive Design</h3>
                     <p>
-                        A media query was included to make the editor page adapt to smaller
-                        devices by stacking the sidebar and main content vertically.
+                        A media query was used to stack the sidebar and main content on
+                        smaller screens.
                     </p>
                 </section>
 
                 <section class="editor-section" id="validation">
                     <h2>Validation</h2>
                     <p>
-                        The page was checked using the Nu HTML Checker. The heading structure
-                        was corrected by keeping a single top-level heading in the shared header
-                        and using a second-level heading for the page hero section.
+                        The page was tested using the Nu HTML Checker. A heading warning
+                        occurred because the page originally used more than one
+                        <code>h1</code>. This was corrected by changing the page hero
+                        heading to <code>h2</code>.
                     </p>
 
                     <div class="note-box">
                         <p>
-                            <strong>Important fix:</strong> The hero heading was changed from
-                            <code>h1</code> to <code>h2</code> to avoid duplicate top-level
-                            headings and improve accessibility.
+                            <strong>Fix applied:</strong> changed <code>&lt;h1&gt;Page E&lt;/h1&gt;</code>
+                            to <code>&lt;h2&gt;Page Editor ST3&lt;/h2&gt;</code>.
                         </p>
                     </div>
-                </section>
-
-                <section class="editor-section" id="challenges">
-                    <h2>Challenges and Lessons Learned</h2>
-                    <p>
-                        One challenge was maintaining a proper heading hierarchy while using the
-                        shared site header. This helped me better understand semantic HTML and
-                        accessibility best practices.
-                    </p>
                 </section>
 
                 <section class="editor-section" id="accessibility">
                     <h2>Accessibility</h2>
                     <ul>
-                        <li>Used meaningful heading levels in the correct order.</li>
-                        <li>Added alternative text for important images where needed.</li>
-                        <li>Ensured navigation links were clear and readable.</li>
-                        <li>Used sufficient color contrast in buttons and section headings.</li>
+                        <li>Used correct heading order for better screen reader support.</li>
+                        <li>Added descriptive navigation labels.</li>
+                        <li>Maintained readable contrast with the green and white theme.</li>
+                        <li>Used meaningful alternative text for logo images.</li>
                     </ul>
                 </section>
 
                 <section class="editor-section" id="compliance">
                     <h2>Compliance</h2>
                     <p>
-                        The page follows good HTML structure, external styling practices, and
-                        consistent navigation and footer usage across the site.
+                        The page follows semantic HTML practices, consistent site styling,
+                        and structured navigation aligned with the overall project design.
                     </p>
                 </section>
 
@@ -159,7 +144,7 @@
                     <ul>
                         <li>W3C Nu HTML Checker</li>
                         <li>MDN Web Docs</li>
-                        <li>Course lecture materials and lab guidance</li>
+                        <li>Course lecture notes and lab materials</li>
                     </ul>
                 </section>
 
