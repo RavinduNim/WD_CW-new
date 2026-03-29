@@ -1,0 +1,228 @@
+@import url(global.css);
+
+/* Page background */
+body {
+    background-color: #f4f7f1;
+}
+
+/* Main page spacing */
+.editor-page {
+    padding: 2rem;
+}
+
+/* Table styling */
+th,
+td {
+    padding: 0.75rem;
+    text-align: left;
+    border: 1px solid #1B4332;
+}
+
+/* Hero section */
+.editor-hero {
+    background: linear-gradient(rgba(27, 67, 50, 0.88), rgba(27, 67, 50, 0.88));
+    color: #ffffff;
+    padding: 2.5rem 1.5rem;
+    border-radius: 14px;
+    margin-bottom: 2rem;
+}
+
+.editor-hero h2 {
+    color: #ffffff;
+    margin-bottom: 0.8rem;
+}
+
+/* Layout */
+.editor-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+/* Sidebar and sections */
+.editor-nav,
+.editor-section {
+    background-color: #ffffff;
+    border-radius: 14px;
+    padding: 1.4rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+}
+
+/* Sticky sidebar */
+.editor-nav {
+    position: sticky;
+    top: 20px;
+}
+
+.editor-nav h2 {
+    margin-bottom: 1rem;
+    color: #1B4332;
+}
+
+.editor-nav ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.editor-nav li {
+    margin-bottom: 0.6rem;
+}
+
+.editor-nav a {
+    color: #2E7D32;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.editor-nav a:hover,
+.editor-nav a:focus {
+    color: #1B4332;
+    text-decoration: underline;
+}
+
+/* Main content */
+.editor-main {
+    display: grid;
+    gap: 1.5rem;
+}
+
+/* Section headings */
+.editor-section h2 {
+    border-bottom: 2px solid #95D5B2;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    color: #1B4332;
+}
+
+.editor-section h3 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: #2E7D32;
+}
+
+.editor-section p,
+.editor-section li {
+    line-height: 1.6;
+}
+
+/* Quick link buttons */
+.quick-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.quick-links a {
+    display: inline-block;
+    background-color: #2E7D32;
+    color: #ffffff;
+    padding: 0.65rem 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.quick-links a:hover,
+.quick-links a:focus {
+    background-color: #1B4332;
+    color: #ffffff;
+}
+
+/* Tags */
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 0.8rem;
+}
+
+.tag {
+    background-color: #d8f3dc;
+    color: #1B4332;
+    padding: 0.45rem 0.8rem;
+    border-radius: 999px;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+/* Meeting table container */
+.meeting-table {
+    overflow-x: auto;
+    table-layout: fixed;
+}
+
+/* Note box */
+.note-box {
+    background-color: #eef8ee;
+    border-left: 5px solid #2E7D32;
+    padding: 1rem 1.1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+/* Code style */
+code {
+    background-color: #f1f5f9;
+    padding: 0.1rem 0.35rem;
+    border-radius: 4px;
+}
+
+/* Go to top */
+.top a {
+    display: inline-block;
+    margin-top: 1.5rem;
+    background-color: #2E7D32;
+    color: white;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.top a:hover {
+    background-color: #1B4332;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .editor-page {
+        padding: 1rem;
+    }
+
+    .editor-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .editor-nav {
+        position: static;
+    }
+}
+
+/* Meeting table styling */
+.meeting-table {
+    overflow-x: auto;
+    margin-top: 1rem;
+}
+
+.meeting-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+.meeting-table th,
+.meeting-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border: 1px solid #1B4332;
+    vertical-align: top;
+}
+
+.meeting-table thead {
+    background-color: #608375;
+    color: #ffffff;
+}

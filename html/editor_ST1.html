@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor Student 1 | Protect Life on Land</title>
+    <link rel="stylesheet" href="/css/global.css">
+
+    <style>
+        /* Page Editor specific styles */
+        body {
+            background-color: #f4f7f1;
+        }
+
+        .editor-hero {
+            background: linear-gradient(rgba(27, 67, 50, 0.88), rgba(27, 67, 50, 0.88));
+            color: #ffffff;
+            padding: 2.5rem 1.5rem;
+            border-radius: 14px;
+            margin-bottom: 2rem;
+        }
+
+        .editor-hero h2 {
+            color: #ffffff;
+            margin-bottom: 0.8rem;
+        }
+
+        .editor-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 1.5rem;
+            align-items: start;
+        }
+
+        .editor-nav,
+        .editor-section {
+            background-color: #ffffff;
+            border-radius: 14px;
+            padding: 1.4rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+        }
+
+        .editor-nav {
+            position: sticky;
+            top: 20px;
+        }
+
+        .editor-nav ul {
+            margin-bottom: 0;
+        }
+
+        .editor-nav li {
+            margin-bottom: 0.6rem;
+        }
+
+        .editor-main {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .editor-section h2 {
+            border-bottom: 2px solid #95D5B2;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .editor-section h3 {
+            margin-top: 1rem;
+        }
+
+        .quick-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .quick-links a {
+            display: inline-block;
+            background-color: #2E7D32;
+            color: #ffffff;
+            padding: 0.65rem 1rem;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .quick-links a:hover,
+        .quick-links a:focus {
+            background-color: #1B4332;
+            color: #ffffff;
+        }
+
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-top: 0.8rem;
+        }
+
+        .tag {
+            background-color: #d8f3dc;
+            color: #1B4332;
+            padding: 0.45rem 0.8rem;
+            border-radius: 999px;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+
+        .meeting-table {
+            overflow-x: auto;
+            table-layout: fixed;
+        }
+         th,td {
+            padding: 0.75rem;
+            text-align: left;
+            border: #1B4332 solid 1px;
+        }
+
+
+        .note-box {
+            background-color: #eef8ee;
+            padding: 1rem 1.1rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+        }
+
+        .top-button {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background-color: #2E7D32;
+            color: #ffffff;
+            padding: 0.8rem 1rem;
+            border-radius: 10px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .top-button:hover,
+        .top-button:focus {
+            background-color: #1B4332;
+            color: #ffffff;
+        }
+
+        code {
+            background-color: #f1f5f9;
+            padding: 0.1rem 0.35rem;
+            border-radius: 4px;
+        }
+
+        @media (max-width: 900px) {
+            .editor-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .editor-nav {
+                position: static;
+            }
+        }
+    </style>
+</head>
+<body id="top">
+
+    <!-- Shared header section -->
+    <header>
+        <div class="logo-area">
+            <img src="/images/logo.png" alt="Protect Life on Land logo">
+            <div>
+                <h1>Protect Life on Land</h1>
+                <p>Practical action for forests, wildlife, and ecosystems</p>
+            </div>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+
+        <!-- Main navigation -->
+        <nav aria-label="Main navigation">
+            <ul class="nav-links">
+                <li><a href="/html/home.html">Home</a></li>
+                <li><a href="/html/gallery.html">Gallery</a></li>
+                <li><a href="/html/ais.html">Action Simulator</a></li>
+                <li><a href="/html/feedback.html">Feedback</a></li>
+                <li><a href="/html/team.html">Team</a></li>
+                <li><a href="/html/profile.html">User Profile</a></li>
+                <li><a href="/html/sitemap.html">Sitemap</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Editor introduction -->
+        <section class="editor-hero reveal">
+            <h2>Page Editor - Student 1</h2>
+            <p>
+                This page documents my individual contribution to the group coursework website
+                <strong>Protect Life on Land</strong>. It explains the pages and features I implemented,
+                the technical decisions I made, the accessibility and compliance considerations I applied,
+                and my contribution to group meetings and project development.
+            </p>
+        </section>
+
+        <div class="editor-layout">
+            <!-- Internal contents navigation -->
+            <aside class="editor-nav reveal">
+                <h2>Contents</h2>
+                <ul>
+                    <li><a href="#student-role">Student Role</a></li>
+                    <li><a href="#completed-tasks">Completed Tasks</a></li>
+                    <li><a href="#template-css">Shared Template and Global CSS</a></li>
+                    <li><a href="#home-page">Home Page</a></li>
+                    <li><a href="#gallery-page">Gallery Page</a></li>
+                    <li><a href="#content-page">Content Page</a></li>
+                    <li><a href="#challenges">Challenges and Lessons Learned</a></li>
+                    <li><a href="#accessibility">Accessibility</a></li>
+                    <li><a href="#compliance">JANET Compliance</a></li>
+                    <li><a href="#meetings-log">Group Meetings and Contribution Log</a></li>
+                    <li><a href="#references">References</a></li>
+                </ul>
+            </aside>
+
+            <div class="editor-main">
+
+                <!-- Student information -->
+                <section id="student-role" class="editor-section reveal">
+                    <h2>Student Name and Role</h2>
+                    <p><strong>Name:</strong> Pasindu Mihisara</p>
+                    <p><strong>Role:</strong> Student 1 - Shared Template Structure, Navigation Bar, Global CSS, Home Page, Gallery Page, and Content Page</p>
+
+                    <div class="tag-list">
+                        <span class="tag">Template</span>
+                        <span class="tag">Navigation</span>
+                        <span class="tag">Global CSS</span>
+                        <span class="tag">Home Page</span>
+                        <span class="tag">Gallery</span>
+                        <span class="tag">Content Page</span>
+                    </div>
+                </section>
+
+                <!-- Completed pages and quick links -->
+                <section id="completed-tasks" class="editor-section reveal">
+                    <h2>Completed Pages / Tasks</h2>
+                    <ul>
+                        <li>Created the shared HTML template structure used across the group website</li>
+                        <li>Created the shared <code>global.css</code> file for the website’s common visual identity</li>
+                        <li>Implemented the navigation bar and active page styling</li>
+                        <li>Developed <code>home.html</code></li>
+                        <li>Developed <code>gallery.html</code></li>
+                        <li>Developed <code>content_ST1.html</code> on forest conservation and tree planting</li>
+                    </ul>
+
+                    <div class="quick-links">
+                        <a href="/html/home.html" target="_blank">View Home Page</a>
+                        <a href="/html/gallery.html" target="_blank">View Gallery Page</a>
+                        <a href="/html/content_ST1.html" target="_blank">View Content Page</a>
+                        <a href="#" target="_blank">View Editor Page</a> 
+                        <a href="/html/validation_ST1.html" target="_blank">View Validation Page</a>
+                    </div>
+
+                    <p>
+                        These pages and features reflect my main technical contribution to the group website.
+                        My goal was to create a consistent visual and structural foundation for the team while
+                        also developing my individual pages in line with the coursework requirements. Student 1 is
+                        responsible for the shared template and styling foundation, Home page, Gallery page, and an
+                        individual content page.
+                    </p>
+                </section>
+
+                <!-- Shared template and CSS explanation -->
+                <section id="template-css" class="editor-section reveal">
+                    <h2>Shared Template and Global CSS</h2>
+
+                    <h3>HTML Structure</h3>
+                    <p>
+                        I created a shared HTML structure so that all group members could use the same layout
+                        across their assigned pages. The structure included a <code>&lt;header&gt;</code> for
+                        the site identity and navigation bar, a <code>&lt;main&gt;</code> area for page-specific
+                        content, and a <code>&lt;footer&gt;</code> with links to each student’s Page Editor and
+                        Validation page. This approach supported consistency and helped the group follow the
+                        required shared structure.
+                    </p>
+                    <p>
+                        I used semantic HTML tags such as <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>,
+                        <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;footer&gt;</code>
+                        because they improve page structure, readability, and accessibility. This also supported
+                        easier collaboration because each group member could place their content inside the same
+                        reusable layout.
+                    </p>
+
+                    <h3>CSS Techniques</h3>
+                    <p>
+                        I created one external stylesheet, <code>global.css</code>, to control the shared appearance
+                        of the website. In this file I defined the body layout, typography, navigation styling,
+                        shared card design, buttons, image styles, footer formatting, form styles, tables, and
+                        responsive layout behaviour. I used a green-based palette to reflect the environmental
+                        theme of Life on Land and to keep the site visually connected across all pages.
+                    </p>
+                    <p>I used:</p>
+                    <ul>
+                        <li>Flexbox for aligning branding and navigation elements</li>
+                        <li>CSS Grid for reusable card and tile layouts</li>
+                        <li>Hover and focus states for links and buttons</li>
+                        <li>Rounded corners and soft shadows to create a modern card-based design</li>
+                        <li>Media queries to support smaller screens</li>
+                    </ul>
+
+                    <h3>Design and Implementation Rationale</h3>
+                    <p>
+                        I separated global and page-specific styling carefully. The shared stylesheet contains only
+                        reusable styles, while each major page uses embedded CSS for page-specific design. I chose
+                        this approach because the coursework brief requires the Global CSS to be shared and not to
+                        contain page-specific rules. This helped the group work more effectively and reduced the
+                        risk of style conflicts across pages.
+                    </p>
+                </section>
+
+                <!-- Home page explanation -->
+                <section id="home-page" class="editor-section reveal">
+                    <h2>Home Page</h2>
+
+                    <h3>HTML Structure</h3>
+                    <p>
+                        The Home page was designed as the main entry point to the website. I used the shared
+                        structure and created a page layout with a hero section, a card-based mission section,
+                        an interactive tile area linking to the four student content pages, and a short action-focused
+                        section encouraging student participation.
+                    </p>
+                    <p>
+                        I used <code>&lt;section&gt;</code> elements to divide the page into meaningful content
+                        areas and <code>&lt;article&gt;</code> elements for the three mission cards. I also used
+                        image elements with alternative text and unordered lists to highlight actions users could take.
+                    </p>
+
+                    <h3>CSS Techniques</h3>
+                    <p>
+                        In addition to the shared stylesheet, I added embedded CSS in the Home page to style the hero
+                        banner, image sizing, the interactive content gallery, and the page-specific highlight section.
+                        These embedded rules made it possible to customise the Home page without changing the shared
+                        stylesheet used by the rest of the team.
+                    </p>
+
+                    <h3>Design and Implementation Rationale</h3>
+                    <p>
+                        I designed the Home page to be visually welcoming and action-focused rather than descriptive.
+                        The content cards were written in original language to show why forests, wildlife, and ecosystem
+                        restoration matter. The interactive content tiles were added because the brief requires the
+                        Home page to provide visual links to all four student content pages.
+                    </p>
+                </section>
+
+                <!-- Gallery page explanation -->
+                <section id="gallery-page" class="editor-section reveal">
+                    <h2>Gallery Page</h2>
+
+                    <h3>HTML Structure</h3>
+                    <p>
+                        The Gallery page contains four thumbnail cards, each representing a different Life on Land
+                        topic such as reforestation, wildlife protection, habitat restoration, and urban green spaces.
+                        Each card stores related information using custom data attributes, including the title, image
+                        path, image alternative text, description, and action tip.
+                    </p>
+
+                    <h3>JavaScript Techniques</h3>
+                    <p>
+                        I used JavaScript to implement the required gallery interactivity. Event listeners were added
+                        to each thumbnail so that when users click a card, a modal opens and displays the correct image,
+                        title, description, and action tip. I also added JavaScript to:
+                    </p>
+                    <ul>
+                        <li>close the modal using a close button</li>
+                        <li>close the modal when clicking outside it</li>
+                        <li>close the modal using the Escape key</li>
+                        <li>support keyboard opening using Enter or Space</li>
+                        <li>change the colour scheme of the expanded view</li>
+                        <li>change the font style of the expanded view</li>
+                    </ul>
+
+                    <h3>Design and Implementation Rationale</h3>
+                    <p>
+                        I used JavaScript rather than CSS-only interaction because the brief clearly states that the
+                        gallery interactivity must be implemented with JavaScript. I chose a modal approach because it
+                        lets users focus on one item at a time without leaving the page. The customisation controls
+                        only affect the expanded view, which directly satisfies the coursework requirement.
+                    </p>
+                </section>
+
+                <!-- Content page explanation -->
+                <section id="content-page" class="editor-section reveal">
+                    <h2>Content Page - Forest Conservation and Tree Planting</h2>
+
+                    <h3>HTML Structure</h3>
+                    <p>
+                        My content page focuses on forest conservation and tree planting. I structured the page using
+                        one main heading and multiple subsections, including why forests matter, threats to forests,
+                        the value of tree planting, student actions, long-term benefits, and a conclusion. I also
+                        added an internal navigation menu near the top of the page to help users jump directly to
+                        different sections.
+                    </p>
+                    <p>
+                        The page includes a <code>Go to Top</code> button implemented using an anchor link and fixed
+                        CSS positioning. This was added because the content page must provide visible internal
+                        navigation for longer content.
+                    </p>
+
+                    <h3>CSS Techniques</h3>
+                    <p>
+                        I used embedded CSS to style the hero section, section cards, two-column layouts, quote box,
+                        images, and fixed top button. I kept the styling consistent with the shared colour palette
+                        while making the page readable and visually organised.
+                    </p>
+
+                    <h3>Design and Implementation Rationale</h3>
+                    <p>
+                        I wrote original content instead of copying SDG material because the coursework asks students
+                        to create meaningful, original content relevant to the chosen SDG. I added internal anchors,
+                        image support, and structured sections so that the page would be easy to navigate and more
+                        accessible to users reading longer content.
+                    </p>
+                </section>
+
+                <!-- Reflection -->
+                <section id="challenges" class="editor-section reveal">
+                    <h2>Challenges and Lessons Learned</h2>
+                    <p>
+                        One of the main challenges I faced was creating a shared design that could be reused by all
+                        group members while still allowing each student to customise their own pages. To solve this,
+                        I separated global styles and page-specific styles carefully. The shared stylesheet contained
+                        only common elements such as navigation, cards, buttons, and layout rules, while each page
+                        used embedded CSS for unique visual behaviour.
+                    </p>
+                    <p>
+                        Another challenge was implementing the Gallery page interaction in a way that clearly showed
+                        JavaScript use. I solved this by using data attributes and event listeners to open and update
+                        a modal dynamically, rather than relying on CSS-only techniques.
+                    </p>
+                    <p>From this process, I learned:</p>
+                    <ul>
+                        <li>how to organise reusable HTML and CSS for group projects</li>
+                        <li>how to separate structure, style, and behaviour more clearly</li>
+                        <li>how to use JavaScript event listeners and DOM updates in a practical way</li>
+                        <li>how accessibility and consistency affect the quality of a website</li>
+                    </ul>
+                </section>
+
+                <!-- Accessibility -->
+                <section id="accessibility" class="editor-section reveal">
+                    <h2>Accessibility Considerations</h2>
+                    <p>
+                        Accessibility was considered throughout the pages I created. I used semantic HTML elements
+                        such as <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>,
+                        and <code>&lt;section&gt;</code> to improve structure and help assistive technologies interpret
+                        the content more easily. I also added meaningful <code>alt</code> text to all images so that
+                        non-visual users can understand the purpose of visual content.
+                    </p>
+                    <p>
+                        On the Gallery page, I added <code>tabindex="0"</code> to interactive thumbnail cards so that
+                        keyboard users can access them. I also supported Enter, Space, and Escape keys to improve
+                        keyboard interaction. In the shared CSS, I included visible focus states on links and form
+                        elements to help users understand which element is currently active.
+                    </p>
+                    <p>I also considered readability by using:</p>
+                    <ul>
+                        <li>high-contrast colours</li>
+                        <li>clear headings and section structure</li>
+                        <li>consistent spacing</li>
+                        <li>responsive layouts for smaller screens</li>
+                    </ul>
+                    <p>
+                        These choices improve usability and inclusivity for a wider range of users. The brief requires
+                        accessibility to be considered across implemented pages, and the compliance notes also emphasise
+                        accessible, inclusive web design.
+                    </p>
+                </section>
+
+                <!-- Compliance -->
+                <section id="compliance" class="editor-section reveal">
+                    <h2>Compliance with JANET Regulations</h2>
+                    <p>
+                        In the pages I created, I aimed to follow JANET-related good practice for responsible web
+                        publishing. My content is appropriate for an educational setting, focuses on a legitimate
+                        academic topic, and avoids harmful, misleading, or unlawful material. I also avoided including
+                        any malicious code or features that could misuse network resources.
+                    </p>
+                    <p>
+                        I used original written content and planned to reference any external resources, such as
+                        images, properly. This supports ethical publishing and reduces the risk of copyright problems.
+                        I also avoided collecting unnecessary personal data. For example, the pages I developed do not
+                        request or process sensitive user information.
+                    </p>
+                    <p>
+                        In addition, I considered accessibility as part of responsible publication. JANET compliance
+                        notes explain that web developers in education should use ethical content, respect copyright,
+                        avoid unnecessary data collection, and support accessibility and secure web practice.
+                    </p>
+
+                    <div class="note-box">
+                        My implementation supports responsible publishing through original content, accessible design,
+                        clear structure, appropriate educational content, and careful use of external materials.
+                    </div>
+                </section>
+
+                <!-- Meeting log -->
+                <section id="meetings-log" class="editor-section reveal">
+                    <h2>Group Meetings and Individual Contribution Log</h2>
+                    <p>
+                        Each student must include a minimum of six group meetings with their own individual contribution
+                        clearly stated. Update the dates and wording below so they match your real group meetings before
+                        submission.
+                    </p>
+
+                    <div class="meeting-table">
+                        <table style="border-collapse: collapse;">
+                            <thead style="background-color: #608375">
+                                <tr>
+                                    <th>Meeting</th>
+                                    <th>Date & Time</th>
+                                    <th>Format</th>
+                                    <th>Objective</th>
+                                    <th>Attended</th>
+                                    <th>My Individual Contribution</th>
+                                </tr>
+                             </thead>
+                             <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>2026/2/12 9.00 pm - 9.45 pm</td>
+                                    <td>Online</td>
+                                    <td>Choose SDG topic and assigning roles</td>
+                                    <td>Yes</td>
+                                    <td>
+                                        I actively participated in the initial team meeting, contributed ideas during the topic discussion,
+                                        and took part in deciding how the project work should be allocated among team members. I also shared
+                                        suggestions for potential project topics and participated in the discussion that helped the team
+                                        shortlist three topics for further evaluation.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>2026/2/18 9.00 pm - 9.30 pm</td>
+                                    <td>Online</td>
+                                    <td>Designing the project and Initial Development Planning</td>
+                                    <td>Yes</td>
+                                    <td>
+                                        I participated in the review of the previous meeting and confirmed the shortlisted topics and task
+                                        allocations with the team. I also contributed to the design discussion by sharing ideas on the colour
+                                        palette, theme selection, and font choices, helping the team agree on the initial design direction
+                                        for the project.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>2026/2/28 11.00 am - 12.00 pm</td>
+                                    <td>Physical</td>
+                                    <td>Establishing Repository and Branching Strategy</td>
+                                    <td>Yes</td>
+                                    <td>
+                                        I participated in the discussion on setting up the centralized Git repository and confirming the
+                                        platform for version control. I also contributed to planning the branching strategy, where we agreed
+                                        to create branches according to the tasks assigned to each team member, while maintaining main and
+                                        development branches for stable integration and collaborative development.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>2026/3/07 11.00 am - 12.00 pm</td>
+                                    <td>Physical</td>
+                                    <td>Development of Home Page</td>
+                                    <td>Yes</td>
+                                    <td>
+                                        I worked on developing the Home page using the shared HTML template and global CSS.
+                                        I implemented the hero section, mission cards, and interactive content area linking to
+                                        all student pages. I ensured the layout was responsive and consistent with the overall
+                                        design structure agreed by the team.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>2026/3/14 11.00 am - 12.00 pm</td>
+                                    <td>Physical</td>
+                                    <td>Development of Gallery Page</td>
+                                    <td>Yes</td>
+                                    <td>
+                                        I developed the Gallery page with four interactive thumbnail cards and implemented
+                                        JavaScript functionality to display content in a modal view. I added keyboard
+                                        accessibility features and ensured that the gallery meets the coursework requirements
+                                        for interactivity and usability.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>2026/3/28 9.30 pm - 10.30 pm</td>
+                                    <td>Online</td>
+                                    <td>Final Fixes and Repository Updates</td>
+                                    <td>Yes</td>
+                                    <td>
+                                        I reviewed my implemented pages and fixed minor issues related to layout, styling,
+                                        and validation. I updated the code accordingly and pushed the final changes to the
+                                        Git repository, ensuring all files were properly structured and up to date for final submission.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- References -->
+                <section id="references" class="editor-section reveal">
+                    <h2>References</h2>
+                    <p>
+                        Update this section so that it matches the real resources you used. The brief requires a
+                        references section with a consistent citation style and in-text references where relevant.
+                    </p>
+                    <ul>
+                        <li id="ref-brief">
+                            University of Westminster. (2025/26). <em>4COSC011W Web Design and Development Coursework Specification</em>.
+                        </li>
+                        <li id="ref-compliance">
+                            University of Westminster / Janet guidance. (2025). <em>Janet Compliance</em>.
+                        </li>
+                        <li id="ref-w3c-html">
+                            W3C. <em>Markup Validation Service</em>.
+                        </li>
+                        <li id="ref-wcag">
+                            W3C. <em>Web Content Accessibility Guidelines (WCAG) 2.1</em>.
+                        </li>
+                        <li id="ref-images">
+                            Royalty-free image sources used for website visuals, referenced individually where applicable.
+                        </li>
+                    </ul>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Go to Top button -->
+    <p class="top"><a href="#top">Go to Top</a></p>
+
+    <!-- Shared footer -->
+    <footer>
+      <div class="student-editors">
+        <h3>Page Editors</h3>
+        <ul>
+          <li><a href="/html/editor_ST1.html">Student 1</a></li>
+          <li><a href="/html/editor_ST2.html">Student 2</a></li>
+          <li><a href="/html/editor_ST3.html">Student 3</a></li>
+          <li><a href="/html/editor_ST4.html">Student 4</a></li>
+        </ul>
+      </div>
+
+      <p>&copy; 2026 Protect Life on Land | GREEN Team</p>
+    </footer>
+
+    <script src="/js/global.js"></script>
+    <script>
+
+        /* Scroll reveal */
+        const reveals = document.querySelectorAll(".reveal");
+
+        function revealOnScroll() {
+            reveals.forEach((el) => {
+                const windowHeight = window.innerHeight;
+                const elementTop = el.getBoundingClientRect().top;
+
+                if (elementTop < windowHeight - 100) {
+                    el.classList.add("active");
+                }
+            });
+        }
+
+        window.addEventListener("scroll", revealOnScroll);
+        window.addEventListener("load", revealOnScroll);
+    </script>
+
+</body>
+</html>

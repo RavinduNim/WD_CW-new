@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Page Student 1 | Protect Life on Land</title>
+    <link rel="stylesheet" href="/css/global.css">
+
+    <style>
+        /* Validation page specific styles */
+        body {
+            background-color: #f4f7f1;
+        }
+
+        .validation-hero {
+            background: linear-gradient(rgba(27, 67, 50, 0.88), rgba(27, 67, 50, 0.88));
+            color: #ffffff;
+            padding: 2.5rem 1.5rem;
+            border-radius: 14px;
+            margin-bottom: 2rem;
+        }
+
+        .validation-hero h2 {
+            color: #ffffff;
+            margin-bottom: 0.8rem;
+        }
+
+        .validation-nav,
+        .validation-card {
+            background-color: #ffffff;
+            border-radius: 14px;
+            padding: 1.4rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+            margin-bottom: 1.5rem;
+        }
+
+        .validation-nav ul {
+            margin-bottom: 0;
+        }
+
+        .validation-card h2 {
+            border-bottom: 2px solid #95D5B2;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .validation-image {
+            width: 100%;
+            max-width: 900px;
+            display: block;
+            margin: 1rem auto;
+            border: 1px solid #d1d5db;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+        }
+
+        .status-box {
+            background-color: #eef8ee;
+            padding: 1rem 1.1rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+        }
+
+        .warning-box {
+            background-color: #fff8e6;
+            padding: 1rem 1.1rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+        }
+
+        .top-button {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background-color: #2E7D32;
+            color: #ffffff;
+            padding: 0.8rem 1rem;
+            border-radius: 10px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .top-button:hover,
+        .top-button:focus {
+            background-color: #1B4332;
+            color: #ffffff;
+        }
+
+        code {
+            color: #2E7D32;
+            background-color: #f1f5f9;
+            padding: 0.1rem 0.35rem;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body id="top">
+
+    <!-- Shared header section -->
+    <header>
+        <div class="logo-area">
+            <img src="/images/logo.png" alt="Protect Life on Land logo">
+            <div>
+                <h1>Protect Life on Land</h1>
+                <p>Practical action for forests, wildlife, and ecosystems</p>
+            </div>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+
+        <!-- Main navigation -->
+        <nav aria-label="Main navigation">
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="ais.html">Action Simulator</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="profile.html">User Profile</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Validation page introduction -->
+        <section class="validation-hero reveal">
+            <h2>Validation Page - Student 1</h2>
+            <p>
+                This page provides validation evidence for the pages I implemented as Student 1:
+                <code>home.html</code>, <code>gallery.html</code>, and <code>content_ST1.html</code>.
+                Each section below includes validation evidence for one implemented page, following the required coursework structure.
+            </p>
+        </section>
+
+        <!-- Internal navigation -->
+        <section class="validation-nav reveal">
+            <h2>Contents</h2>
+            <ul>
+                <li><a href="#home-validation">Home Page Validation</a></li>
+                <li><a href="#gallery-validation">Gallery Page Validation</a></li>
+                <li><a href="#content-validation">Content Page Validation</a></li>
+                <li><a href="#validation-reflection">Reflection on Validation</a></li>
+            </ul>
+        </section>
+
+        <!-- Home validation -->
+        <section id="home-validation" class="validation-card reveal">
+            <h2>Home Page Validation - <code>home.html</code></h2>
+            <p>
+                This section provides validation evidence for the Home page. The screenshot should clearly show
+                the file name and successful validation result from the validator.
+            </p>
+
+            <img src="/images/validation_ST1/home-validation.png"
+                 alt="Validation screenshot showing successful validation for home.html"
+                 class="validation-image">
+
+            <div class="status-box">
+                <p><strong>Status:</strong> Passed validation with no errors.</p>
+                <p><strong>Notes:</strong> The page includes the shared structure, three content cards, embedded CSS, and links to the four content pages.</p>
+            </div>
+        </section>
+
+        <!-- Gallery validation -->
+        <section id="gallery-validation" class="validation-card reveal">
+            <h2>Gallery Page Validation - <code>gallery.html</code></h2>
+            <p>
+                This section provides validation evidence for the Gallery page, including the thumbnail layout,
+                modal structure, and JavaScript-supported interactivity.
+            </p>
+
+            <img src="/images/validation_ST1/gallery-validation.png"
+                 alt="Validation screenshot showing successful validation for gallery.html"
+                 class="validation-image">
+
+            <div class="status-box">
+                <p><strong>Status:</strong> Passed validation with no errors.</p>
+                <p><strong>Notes:</strong> The page includes four thumbnails, modal content, keyboard-accessible interactive cards, and extended view controls.</p>
+            </div>
+        </section>
+
+        <!-- Content page validation -->
+        <section id="content-validation" class="validation-card reveal">
+            <h2>Content Page Validation - <code>content_ST1.html</code></h2>
+            <p>
+                This section provides validation evidence for my individual content page on forest conservation
+                and tree planting.
+            </p>
+
+            <img src="/images/validation_ST1/content-st1-validation.png"
+                 alt="Validation screenshot showing successful validation for content_ST1.html"
+                 class="validation-image">
+
+            <div class="status-box">
+                <p><strong>Status:</strong> Passed validation with no errors.</p>
+                <p><strong>Notes:</strong> The page includes internal navigation, structured headings, multiple images with alt text, and a fixed Go to Top button.</p>
+            </div>
+        </section>
+
+        <!-- Reflection -->
+        <section id="validation-reflection" class="validation-card reveal">
+            <h2>Reflection on Validation</h2>
+            <p>
+                Validation helped me identify and correct small markup issues during development, such as missing
+                attribute values, link consistency, invalid semantic structures, and heading hierarchy problems that
+                could affect standards compliance and accessibility. By checking each page carefully, I was able to
+                improve code quality and ensure that the final pages followed valid HTML structure.
+            </p>
+            <p>
+                One important lesson I learned from the validation process is that even when a page looks correct
+                in the browser, the underlying HTML can still contain errors or accessibility weaknesses. Using the
+                validator helped me confirm that my pages were technically correct, easier to maintain, and ready
+                for submission.
+            </p>
+
+            <div class="warning-box">
+                <p><strong>This page provides validation evidence for the pages I implemented as Student 1</strong> </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Go to Top button -->
+    <p class="top"><a href="#top">Go to Top</a></p>
+
+    <!-- Shared footer -->
+    <footer>
+      <div class="student-editors">
+        <h3>Page Editors</h3>
+        <ul>
+          <li><a href="/html/editor_ST1.html">Student 1</a></li>
+          <li><a href="/html/editor_ST2.html">Student 2</a></li>
+          <li><a href="/html/editor_ST3.html">Student 3</a></li>
+          <li><a href="/html/editor_ST4.html">Student 4</a></li>
+        </ul>
+      </div>
+
+      <p>&copy; 2026 Protect Life on Land | GREEN Team</p>
+    </footer>
+
+    <script src="/js/global.js"></script>
+    <script>
+
+        /* Scroll reveal */
+        const reveals = document.querySelectorAll(".reveal");
+
+        function revealOnScroll() {
+            reveals.forEach((el) => {
+                const windowHeight = window.innerHeight;
+                const elementTop = el.getBoundingClientRect().top;
+
+                if (elementTop < windowHeight - 100) {
+                    el.classList.add("active");
+                }
+            });
+        }
+
+        window.addEventListener("scroll", revealOnScroll);
+        window.addEventListener("load", revealOnScroll);
+    </script>
+
+</body>
+</html>

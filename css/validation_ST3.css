@@ -1,0 +1,186 @@
+@import url(global.css);
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f4f7f1;
+}
+
+.validation-page {
+    padding: 2rem;
+}
+
+.validation-hero {
+    background: linear-gradient(rgba(27, 67, 50, 0.88), rgba(27, 67, 50, 0.88));
+    color: #ffffff;
+    padding: 2.5rem 1.5rem;
+    border-radius: 14px;
+    margin-bottom: 2rem;
+}
+
+.validation-hero h2 {
+    color: #ffffff;
+    margin-bottom: 0.8rem;
+}
+
+.validation-hero p {
+    line-height: 1.8;
+    font-size: 1.05rem;
+    margin: 0;
+    color: #ffffff;
+}
+
+.validation-nav,
+.validation-card {
+    background-color: #ffffff;
+    border-radius: 14px;
+    padding: 1.4rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+.validation-nav h2,
+.validation-card h2 {
+    color: #1B4332;
+    margin-bottom: 1rem;
+}
+
+.validation-nav ul {
+    margin-bottom: 0;
+    padding-left: 1.2rem;
+}
+
+.validation-nav li {
+    margin-bottom: 0.5rem;
+}
+
+.validation-nav a {
+    color: #2e7d32;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.validation-nav a:hover,
+.validation-nav a:focus {
+    color: #1b4332;
+    text-decoration: underline;
+}
+
+.validation-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.validation-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.validation-card h2 {
+    border-bottom: 2px solid #95d5b2;
+    padding-bottom: 0.5rem;
+}
+
+.validation-card p {
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.validation-card + .validation-card {
+    margin-top: 1.8rem;
+}
+
+.validation-image {
+    width: 100%;
+    max-width: 900px;
+    display: block;
+    margin: 1.2rem auto;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    padding: 4px;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.status-box {
+    background-color: #eef8ee;
+    border-left: 5px solid #2e7d32;
+    padding: 1rem 1.1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.status-box p {
+    margin-bottom: 0.5rem;
+}
+
+.status-box p:last-child {
+    margin-bottom: 0;
+}
+
+.warning-box {
+    background-color: #fff8e6;
+    border-left: 5px solid #d97706;
+    padding: 1rem 1.1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+code {
+    background-color: rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+    padding: 0.15rem 0.45rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+.validation-card code,
+.validation-nav code {
+    background-color: #f1f5f9;
+    color: #1B4332;
+}
+
+.top-link {
+    text-align: right;
+    margin-top: 1.5rem;
+}
+
+.top-link a {
+    display: inline-block;
+    background-color: #2e7d32;
+    color: #ffffff;
+    padding: 0.7rem 1rem;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.top-link a:hover,
+.top-link a:focus {
+    background-color: #1b4332;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .validation-page {
+        padding: 1rem;
+    }
+
+    .validation-hero,
+    .validation-nav,
+    .validation-card {
+        padding: 1.2rem;
+    }
+
+    .validation-hero h2,
+    .validation-nav h2,
+    .validation-card h2 {
+        font-size: 1.3rem;
+    }
+
+    .validation-hero p {
+        font-size: 1rem;
+    }
+}
