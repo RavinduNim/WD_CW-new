@@ -28,7 +28,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #084805 0%, #17c90e 100%);
+  background: linear-gradient(135deg, var(--primary-color) 0%, #17c90e 100%);
   border-radius: 15px;
   margin-bottom: 30px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -36,7 +36,7 @@ main {
 
 .hero h1 {
   font-size: clamp(1.5rem, 5vw, 3rem);
-  color: white;
+  color: var(--white-color);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   margin: 0;
   font-weight: bold;
@@ -55,13 +55,13 @@ section {
   border: 1px solid #ddd;
   background-color: #fafafa;
   border-color: #030303;
-  background-color: antiquewhite;
+  background-color: antiquevar(--white-color);
 }
 
 .sec {
   margin-top: 10px;
   border-radius: 32px 32px 0px 0px;
-  border-color: #084805;
+  border-color: var(--primary-color);
   border-width: 2px;
 }
 
@@ -72,8 +72,8 @@ section {
   align-items: center;
   text-align: center;
   line-height: 0;
-  background-color: #084805;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--white-color);
   margin-top: 8px;
 }
 
@@ -85,7 +85,7 @@ section {
   justify-content: center;
   align-items: center;
   background-color: #162b15;
-  color: white;
+  color: var(--white-color);
   border-radius: 30px 30px 0px 0px;
 }
 
