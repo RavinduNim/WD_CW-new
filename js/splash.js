@@ -1,4 +1,4 @@
-let secondsLeft =4 ;                                                        
+let secondsLeft =3 ;                                                        
 const countdownElement = document.getElementById("countdown-text");
 
 const countdownInterval = setInterval(() => {
