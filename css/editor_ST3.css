@@ -5,7 +5,7 @@ body {
     background-color: #f4f7f1;
 }
 
-/* Main page wrapper */
+/* Main page spacing */
 .editor-page {
     padding: 2rem;
 }
@@ -107,7 +107,7 @@ td {
     line-height: 1.6;
 }
 
-/* Quick links */
+/* Quick link buttons */
 .quick-links {
     display: flex;
     flex-wrap: wrap;
@@ -155,7 +155,7 @@ td {
     table-layout: fixed;
 }
 
-/* Highlight box */
+/* Note box */
 .note-box {
     background-color: #eef8ee;
     border-left: 5px solid #2E7D32;
@@ -164,14 +164,14 @@ td {
     margin-top: 1rem;
 }
 
-/* Code styling */
+/* Code style */
 code {
     background-color: #f1f5f9;
     padding: 0.1rem 0.35rem;
     border-radius: 4px;
 }
 
-/* Go to top link */
+/* Go to top */
 .top a {
     display: inline-block;
     margin-top: 1.5rem;
@@ -187,7 +187,7 @@ code {
     background-color: #1B4332;
 }
 
-/* Responsive layout */
+/* Responsive */
 @media (max-width: 900px) {
     .editor-page {
         padding: 1rem;
