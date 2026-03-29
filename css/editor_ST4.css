@@ -1,0 +1,154 @@
+body {
+    background-color: #f4f7f1;
+}
+
+th,
+td {
+    padding: 0.75rem;
+    text-align: left;
+    border: #1B4332 solid 1px;
+}
+
+.editor-hero {
+    background: linear-gradient(rgba(27, 67, 50, 0.88), rgba(27, 67, 50, 0.88));
+    color: #ffffff;
+    padding: 2.5rem 1.5rem;
+    border-radius: 14px;
+    margin-bottom: 2rem;
+}
+
+.editor-hero h1 {
+    color: #ffffff;
+    margin-bottom: 0.8rem;
+}
+
+.editor-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.editor-nav,
+.editor-section {
+    background-color: #ffffff;
+    border-radius: 14px;
+    padding: 1.4rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+}
+
+.editor-nav {
+    position: sticky;
+    top: 20px;
+}
+
+.editor-nav ul {
+    margin-bottom: 0;
+}
+
+.editor-nav li {
+    margin-bottom: 0.6rem;
+}
+
+.editor-main {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.editor-section h2 {
+    border-bottom: 2px solid #95D5B2;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.editor-section h3 {
+    margin-top: 1rem;
+}
+
+.quick-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.quick-links a {
+    display: inline-block;
+    background-color: #2E7D32;
+    color: #ffffff;
+    padding: 0.65rem 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.quick-links a:hover,
+.quick-links a:focus {
+    background-color: #1B4332;
+    color: #ffffff;
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 0.8rem;
+}
+
+.tag {
+    background-color: #d8f3dc;
+    color: #1B4332;
+    padding: 0.45rem 0.8rem;
+    border-radius: 999px;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.meeting-table {
+    overflow-x: auto;
+    table-layout: fixed;
+    ;
+}
+
+.note-box {
+    background-color: #eef8ee;
+    border-left: 5px solid #2E7D32;
+    padding: 1rem 1.1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.top-button {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: #2E7D32;
+    color: #ffffff;
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.top-button:hover,
+.top-button:focus {
+    background-color: #1B4332;
+    color: #ffffff;
+}
+
+code {
+    background-color: #f1f5f9;
+    padding: 0.1rem 0.35rem;
+    border-radius: 4px;
+}
+
+@media (max-width: 900px) {
+    .editor-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .editor-nav {
+        position: static;
+    }
+}
