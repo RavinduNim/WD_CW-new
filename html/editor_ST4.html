@@ -110,7 +110,8 @@
 
                     <p>
                         Above mentioned and linked pages shows that my main technical contribution to the group website
-                        developement.. My goal was to develop for the progressive User Profile page by getting inputs from
+                        developement.. My goal was to develop for the progressive User Profile page by getting inputs
+                        from
                         users and display on web, the interactive SVG
                         Sitemap to nevigate all main pages which is include in whole website, and an individual content
                         page, editor page and validation page.
@@ -122,34 +123,39 @@
 
                     <h3>HTML Structure</h3>
                     <p>
-                        I used the shared HTML template provided by Student 1 to maintain consistency[cite: 678]. Inside
+                        I used the shared HTML template to maintain consistency of our group website. Inside
                         the <code>&lt;main&gt;</code> section, I created a clean structure using
-                        <code>&lt;div&gt;</code> containers for the profile output cards. These cards were initially
-                        hidden using CSS [cite: 706-708]. I also structured a progress bar wrapper to visually show
-                        completion.
+                        <code>&lt;div&gt;</code> containers for the profile output cards after geting nput fro user.
+                        These cards were initially
+                        hidden using CSS class <code>profileCard</code> and using CSS property
+                        <code>display:none;</code> . I also structured a progress bar wrapper to visually show
+                        completion with CSS <code>progressBar</code> class.
                     </p>
 
                     <h3>JavaScript Techniques</h3>
                     <p>
-                        Instead of standard HTML forms, I used JavaScript <code>prompt()</code> dialogs to collect user
-                        data progressively across three steps [cite: 686-698]. I used DOM manipulation
+                        Instead of standard HTML forms, I used JavaScript <code>prompt()</code> clause to collect user
+                        data from browser's popup input message box progressively across three steps . I used DOM
+                        manipulation
                         (<code>document.getElementById</code>) to:
                     </p>
                     <ul>
-                        <li>Update the HTML content dynamically without reloading the page [cite: 709-712].</li>
-                        <li>Reveal the hidden profile cards once data was entered.</li>
-                        <li>Calculate the number of completed prompts and update the CSS width of the progress bar
-                            [cite: 713-721].</li>
-                        <li>Allow users to skip prompts (handling <code>null</code> values) and revisit them later
-                            [cite: 723-738].</li>
+                        <li>Update the HTML content dynamically without reloading the page.</li>
+                        <li>Display the hidden profile cards once data was filled.</li>
+                        <li>Calculate the number of completed prompts and update the CSS width of the progress bar with
+                            <code>completeFields++</code> in the for loop .
+                        </li>
+                        <li>Allow users to skip input prompts (handling <code>null</code> values) and recompletee them
+                            later.</li>
                     </ul>
 
                     <h3>Design and Implementation Rationale</h3>
                     <p>
                         I chose a simple, global variable approach for my JavaScript to keep the logic clean and
-                        readable. By avoiding complex arrays or objects, it was easier to track empty versus completed
+                        readable. By avoiding complex codes or objects, it was easier to track empty answers and
+                        completed
                         answers for the progress bar. The progressive disclosure design keeps the user from feeling
-                        overwhelmed by too many questions at once.
+                        complereness by too many questions at once.
                     </p>
                 </section>
 
@@ -159,26 +165,27 @@
                     <h3>HTML & SVG Structure</h3>
                     <p>
                         The Sitemap page was built using Scalable Vector Graphics (<code>&lt;svg&gt;</code>) to create a
-                        visual hierarchy of our website [cite: 799-801]. I mapped out the parent and child pages using
-                        shapes like <code>&lt;rect&gt;</code> and connected them with <code>&lt;line&gt;</code> tags
-                        [cite: 802-808].
+                        visual hierarchy of our website. I mapped out other main pages like Home page, Gallery page, AIS
+                        page, Feedback, Team and Profile page using
+                        shapes like <code>&lt;rect&gt;</code> and connected them with <code>&lt;line&gt;</code> tags to
+                        connect visual reqtangle via lines.
                     </p>
-
 
                     <h3>CSS & Interactive Techniques</h3>
                     <p>
                         Every node in the SVG is wrapped in an <code>&lt;a&gt;</code> tag so it functions as a working
-                        link to the actual HTML pages [cite: 814-816]. I used CSS to apply hover effects (changing the
+                        link to the actual HTML pages ad described above. I used CSS to apply hover effects (changing
+                        the
                         fill colour) to the SVG shapes, providing clear visual feedback to the user that the diagram is
-                        interactive [cite: 817-819].
+                        interactive and user friendly.
                     </p>
 
-                    <h3>esign and Implementation Rationale</h3>
+                    <h3>Design and Implementation Rationale</h3>
                     <p>
-                        I used SVG rather than a standard image because SVGs are resolution-independent and scale
-                        perfectly on mobile and desktop screens without losing quality [cite: 830-833]. The design
-                        matches our group's "Life on Land" green colour palette to maintain the visual identity [cite:
-                        837-841].
+                        I used SVG rather than a standard image because SVGs are resolutions independent and scale
+                        perfectly on mobile and desktop screens without losing quality and responsiveness. The design
+                        matches our group's "Life on Land" green colour palette to maintain the visual identityy of the
+                        website.
                     </p>
                 </section>
 
@@ -188,53 +195,57 @@
                     <h3>HTML Structure</h3>
                     <p>
                         My content page focuses on the environmental impact of electronic waste. I structured the page
-                        using proper semantic hierarchy, starting with an <code>&lt;h1&gt;</code> and using
-                        <code>&lt;h2&gt;</code> for the six subsections [cite: 904-908]. Because the content is long and
-                        requires scrolling, I implemented an internal navigation menu (List of Contents) using anchor
-                        links (<code>href="#sec1"</code>) [cite: 909-915]
+                        using proper website hierarchy, starting with an <code>&lt;h1&gt;</code> and using
+                        <code>&lt;h2&gt;</code> for the six subsections. Because the content is long and
+                        requires scrolling, I have implemented an internal navigation menu (List of Contents) using
+                        anchor
+                        links (<code>href="#sec1"</code>).
                     </p>
                     <p>
                         The page includes a <code>Go to Top</code> button implemented purely with HTML and CSS, without
-                        relying on JavaScript [cite: 930-936].
+                        involving on JavaScript to go to top of the page.
                     </p>
 
 
                     <h3>CSS Techniques</h3>
                     <p>
                         I used embedded CSS to style the required images, using <code>width: 100%</code> and
-                        <code>max-width</code> to ensure they were responsive, while adding borders and shadows [cite:
-                        938-946]. For the "Go to Top" button, I used <code>position: fixed</code> so it stays visible in
-                        the corner of the screen while scrolling[cite: 937].
+                        <code>max-width</code> to ensure that were responsive, while adding borders and shadows. For the
+                        "Go to Top" button, I used <code>position: fixed</code> so it stays visible in
+                        the corner of the screen while scrolling.
                     </p>
 
                     <h3>Design and Implementation Rationale</h3>
                     <p>
-                        I wrote original content focused on tech waste because it is highly relevant to IT students
-                        while directly addressing land degradation under SDG 15 [cite: 895-898, 902]. The internal
-                        anchors and fixed "Go to Top" button were added to vastly improve user experience and navigation
-                        on text-heavy pages [cite: 922-929].
+                        I wrote original content focused on tech waste because it is highly relevant to IT undergraduade
+                        students
+                        while directly addressing land degradation under SDG topics. The internal
+                        anchors and fixed "Go to Top" button were added to highlt improve user experience and navigation
+                        on text heavy pages.
                     </p>
                 </section>
 
                 <section id="challenges" class="editor-section reveal">
                     <h2>Challenges and Lessons Learned</h2>
                     <p>
-                        My main challenge was implementing the JavaScript for the User Profile. Initially, calculating
-                        the progress bar and handling skipped prompts was tricky. I solved this by using simple
+                        My main challenge was implementing the JavaScript for the User Profile. Other one is,
+                        calculating
+                        the progress bar and handling skipped prompts was littlebit complex. I solved this by using
+                        simple
                         <code>if</code> statements to check if variables were empty or <code>null</code> before updating
                         the DOM and the progress percentage.
                     </p>
                     <p>
                         Another challenge was making the SVG sitemap accessible. I learned that standard HTML text isn't
                         always read correctly inside SVGs, so I had to add <code>&lt;title&gt;</code> tags inside the
-                        SVG links so screen readers could announce the destinations properly [cite: 823-825].
+                        SVG links. so screen readers could recognize the destinations properly.
                     </p>
                     <p>From this process, I learned:</p>
                     <ul>
-                        <li>how to use JavaScript <code>prompt()</code> to interact with users [cite: 686-687].</li>
-                        <li>how to manipulate the DOM to dynamically display hidden content [cite: 709-712].</li>
-                        <li>how to code interactive graphics using SVG [cite: 800-801].</li>
-                        <li>how to use CSS <code>position: fixed</code> and internal anchor links [cite: 909-915, 937].
+                        <li>how to use JavaScript <code>prompt()</code> to get popup inputs.</li>
+                        <li>how to manipulate the DOM to dynamically display hidden content.</li>
+                        <li>how to code interactive graphics using SVG.</li>
+                        <li>how to use CSS <code>position: fixed</code> and internal anchor links.
                         </li>
                     </ul>
                 </section>
@@ -245,12 +256,12 @@
                     <p>
                         I ensured accessibility across all my assigned tasks. For the Tech Waste Content Page, I
                         structured headings logically (H1, H2) for screen readers and included descriptive
-                        <code>alt</code> text for all images [cite: 904-908, 939-941].
+                        <code>alt</code> text for all images.
                     </p>
                     <p>
                         For the SVG Sitemap, I ensured all clickable nodes included a text label and an accessible name
-                        (using <code>&lt;title&gt;</code> tags) [cite: 823-825]. I also verified that the links are
-                        focusable via keyboard navigation [cite: 826-828]. On the User Profile, I used high-contrast
+                        (using <code>&lt;title&gt;</code> tags). I also verified that the links are
+                        focusable via keyboard navigation. On the User Profile, I used high eye detective
                         colours for the progress bar to ensure it is easy to read.
                     </p>
                     <p>I also considered readability by using:</p>
@@ -261,7 +272,7 @@
                         <li>responsive screen layout for diffrence device sizes</li>
                     </ul><br>
                     <p>
-                        These choices improve usability and inclusivity for a wider range of users. The brief requires
+                        These choices improve usability and helps for a wider range of users. The brief requires
                         accessibility to be considered across implemented pages, and the compliance notes also emphasise
                         accessible, inclusive web design.
                     </p>
@@ -271,14 +282,14 @@
                     <h2>Compliance with JANET Regulations</h2>
                     <p>
                         In the pages I created, I adhered to JANET acceptable use policies by ensuring all published
-                        content is strictly educational and relevant to our SDG 15 academic topic (Tech Waste) [cite:
-                        1030-1031]. I did not include any malicious scripts or inappropriate content[cite: 1033].
+                        content is strictly educational and relevant to our SDG academic topic (Tech Waste). I did not
+                        include any malicious scripts or inappropriate content.
                     </p>
                     <p>
-                        My JavaScript data collection on the User Profile is entirely client-side; no personal data is
-                        transmitted to or stored on a server, respecting user privacy [cite: 1032-1035]. All external
-                        images used on my content page are sourced from royalty-free sites and properly referenced,
-                        avoiding copyright infringement[cite: 1034].
+                        My JavaScript data collection on the User Profile is totally client side; no personal data is
+                        collect to or stored on a server, respecting user privacy. All external
+                        images used on my content page are sourced from royalty free sites and properly referenced,
+                        avoiding copyright infringement.
                     </p>
                     <p>
                         In addition, I considered accessibility as part of responsible publication. JANET compliance
@@ -291,11 +302,6 @@
 
                 <section id="meetings-log" class="editor-section reveal">
                     <h2>Group Meetings and Individual Contribution Log</h2>
-                    <p>
-                        Each student must include a minimum of six group meetings with their own individual contribution
-                        clearly stated. Update the dates and wording below so they match your real group meetings before
-                        submission.
-                    </p>
 
                     <div class="meeting-table">
                         <table style="border-collapse: collapse;">
@@ -318,7 +324,7 @@
                                     <td>Yes</td>
                                     <td>I agreed to take Student 4 responsibilities and design the site map and Profile
                                         page.
-                                        “Protect Life on Land”.</td>
+                                        “Life on Land” topic.</td>
                                 </tr>
                                 <tr>
                                     <td>2</td>
@@ -326,8 +332,9 @@
                                     <td>Online</td>
                                     <td>Discuss design direction and colour palette & Initial design sketches</td>
                                     <td>Yes</td>
-                                    <td>I proposed the green-based colour palette, overall card layout, and shared
-                                        navigation structure.confirmed the shortlist topics task allocation with team.
+                                    <td>I proposed the green based colour palette, overall use it in global css of
+                                        studet 1. Also discussed about user profile popup question types and whast we
+                                        should gathered .
                                     </td>
                                 </tr>
                                 <tr>
@@ -335,11 +342,11 @@
                                     <td>28 Feb 2026, 11:00 AM-12.00PM</td>
                                     <td>Physical</td>
                                     <td>Plan the shared template and folder structure and Establish the repository and
-                                        Branching Strategy</td>
+                                        Branching Strategiy</td>
                                     <td>Yes</td>
                                     <td>I explained the required file names from the brief and prepared the shared HTML
-                                        structure and CSS approach.and centralized git repository confirm the platform
-                                        for the version control.</td>
+                                        structure and CSS approach and discussed about layout of content page, editor
+                                        page and gitHub repos.</td>
                                 </tr>
                                 <tr>
                                     <td>4</td>
@@ -347,8 +354,10 @@
                                     <td>Physical</td>
                                     <td>Review progress on assigned pages</td>
                                     <td>Yes</td>
-                                    <td>I showed the first draft of the site map and gave profile page to other members
-                                        about keeping the shared structure consistent.</td>
+                                    <td>I showed the first draft of the user profile page and sitemap page to other
+                                        members
+                                        about keeping the shared structure consistent and gathered their ideas about
+                                        this.</td>
                                 </tr>
                                 <tr>
                                     <td>5</td>
@@ -357,8 +366,8 @@
                                     <td>Check page integration and internal links</td>
                                     <td>Yes</td>
                                     <td>I tested navigation links, checked active page styling, and suggested
-                                        improvements for consistency across pages.And check the file pathe and the
-                                        structure of the site map.</td>
+                                        improvements for consistency across pages.And check the file paths and the
+                                        structure of the site map suits for actual site structurre..</td>
                                 </tr>
                                 <tr>
                                     <td>6</td>
@@ -382,32 +391,21 @@
                     </p>
                     <ul>
                         <li id="ref-brief">
-                            University of Westminster. (2025/26). <em>4COSC011W Web Design and Development Coursework
-                                Specification</em>.
+                            University of Westminster. (2025/26). 4COSC011W Web Design and Development Coursework
+                            Specification.</em>.
                         </li>
                         <li id="ref-mdn-js">
-                            Mozilla Developer Network (MDN). (n.d.). <em>Window.prompt() and DOM Manipulation</em>.
-                            Retrieved to support the interactive functionality on the User Profile page.
-                        </li>
-                        <li id="ref-mdn-svg">
-                            Mozilla Developer Network (MDN). (n.d.). <em>SVG: Scalable Vector Graphics</em>. Consulted
-                            for structuring the nodes, lines, and links on the interactive Sitemap page.
-                        </li>
-                        <li id="ref-compliance">
-                            University of Westminster / Janet guidance. (n.d.). <em>Janet Acceptable Use Policy</em>.
-                            Consulted to ensure responsible web publishing.
+                            W3C Nu HTML Checker.
                         </li>
                         <li id="ref-w3c-html">
-                            W3C. (n.d.). <em>Markup Validation Service</em>. Used to validate the HTML code for all my
-                            implemented pages.
+                            University of Westminster / Janet guidance. (2025). Janet Compliance.
                         </li>
                         <li id="ref-wcag">
-                            W3C. (n.d.). <em>Web Content Accessibility Guidelines (WCAG) 2.1</em>. Consulted to ensure
-                            proper use of alt text, ARIA titles, and keyboard navigation.
+                            Royalty-free image sources used for website visuals, referenced individually where
+                            applicable.
                         </li>
                         <li id="ref-images">
-                            Unsplash / Pexels. (n.d.). <em>Royalty-free image sources</em>. Used to source the images
-                            for the "Tech Waste and Soil Pollution" content page.
+                            Course lecture materials and lab guidance.
                         </li>
                     </ul>
                 </section>
