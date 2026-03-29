@@ -1,24 +1,24 @@
 body {
-  background-color: #f4f7f1;
+  background-color: var(--light-text);
 }
 
 th,
 td{
   padding: 0.75rem;
   text-align: left;
-  border: #1b4332 solid 1px;
+  border: var(--primary-color) solid 1px;
 }
 
 .editor-hero {
   background: linear-gradient(rgba(27, 67, 50, 0.88), rgba(27, 67, 50, 0.88));
-  color: #ffffff;
+  color: var(--white-color);
   padding: 2.5rem 1.5rem;
   border-radius: 14px;
   margin-bottom: 2rem;
 }
 
 .editor-hero h1 {
-  color: #ffffff;
+  color: var(--white-color);
   margin-bottom: 0.8rem;
 }
 
@@ -31,7 +31,7 @@ td{
 
 .editor-nav,
 .editor-section {
-  background-color: #ffffff;
+  background-color: var(--white-color);
   border-radius: 14px;
   padding: 1.4rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
@@ -56,7 +56,7 @@ td{
 }
 
 .editor-section h2 {
-  border-bottom: 2px solid #95d5b2;
+  border-bottom: 2px solid var(--accent-color);
   padding-bottom: 0.5rem;
   margin-bottom: 1rem;
 }
@@ -75,8 +75,8 @@ td{
 
 .quick-links a {
   display: inline-block;
-  background-color: #2e7d32;
-  color: #ffffff;
+  background-color: var(--secondary-color);
+  color: var(--white-color);
   padding: 0.65rem 1rem;
   border-radius: 8px;
   font-weight: bold;
@@ -84,8 +84,8 @@ td{
 
 .quick-links a:hover,
 .quick-links a:focus {
-  background-color: #1b4332;
-  color: #ffffff;
+  background-color: var(--primary-color);
+  color: var(--white-color);
 }
 
 .tag-list {
@@ -96,8 +96,8 @@ td{
 }
 
 .tag {
-  background-color: #d8f3dc;
-  color: #1b4332;
+  background-color: var(--light-text);
+  color: var(--secondary-color);
   padding: 0.45rem 0.8rem;
   border-radius: 999px;
   font-weight: bold;
@@ -111,8 +111,8 @@ td{
 }
 
 .note-box {
-  background-color: #eef8ee;
-  border-left: 5px solid #2e7d32;
+  background-color: var(--light-text);
+  border-left: 5px solid var(--secondary-color);
   padding: 1rem 1.1rem;
   border-radius: 10px;
   margin-top: 1rem;
@@ -122,8 +122,8 @@ td{
   position: fixed;
   right: 20px;
   bottom: 20px;
-  background-color: #2e7d32;
-  color: #ffffff;
+  background-color: var(--secondary-color);
+  color: var(--white-color);
   padding: 0.8rem 1rem;
   border-radius: 10px;
   font-weight: bold;
@@ -133,12 +133,12 @@ td{
 
 .top-button:hover,
 .top-button:focus {
-  background-color: #1b4332;
-  color: #ffffff;
+  background-color: var(--secondary-color);
+  color: var(--white-color);
 }
 
 code {
-  background-color: #f1f5f9;
+  background-color: var(--light-text);
   padding: 0.1rem 0.35rem;
   border-radius: 4px;
 }
