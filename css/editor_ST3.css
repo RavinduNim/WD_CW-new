@@ -201,3 +201,28 @@ code {
         position: static;
     }
 }
+
+/* Meeting table styling */
+.meeting-table {
+    overflow-x: auto;
+    margin-top: 1rem;
+}
+
+.meeting-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+.meeting-table th,
+.meeting-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border: 1px solid #1B4332;
+    vertical-align: top;
+}
+
+.meeting-table thead {
+    background-color: #608375;
+    color: #ffffff;
+}
