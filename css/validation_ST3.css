@@ -1,5 +1,9 @@
 @import url(global.css);
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #f4f7f1;
 }
@@ -62,6 +66,15 @@ body {
     text-decoration: underline;
 }
 
+.validation-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.validation-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
 .validation-card h2 {
     border-bottom: 2px solid #95d5b2;
     padding-bottom: 0.5rem;
@@ -72,13 +85,19 @@ body {
     margin-bottom: 1rem;
 }
 
+.validation-card + .validation-card {
+    margin-top: 1.8rem;
+}
+
 .validation-image {
     width: 100%;
     max-width: 900px;
     display: block;
-    margin: 1rem auto;
+    margin: 1.2rem auto;
     border: 1px solid #d1d5db;
     border-radius: 12px;
+    padding: 4px;
+    background: #ffffff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
 }
 
@@ -114,14 +133,14 @@ code {
 
 .top-link {
     text-align: right;
+    margin-top: 1.5rem;
 }
 
 .top-link a {
     display: inline-block;
-    margin-top: 1rem;
     background-color: #2e7d32;
     color: #ffffff;
-    padding: 0.8rem 1rem;
+    padding: 0.7rem 1rem;
     border-radius: 10px;
     font-weight: bold;
     text-decoration: none;
