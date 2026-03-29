@@ -17,10 +17,8 @@
         </div>
       </div>
 
-      
       <button class="menu-toggle" aria-label="Toggle menu">☰</button>
 
-     
       <nav aria-label="Main navigation">
         <ul class="nav-links">
           <li><a href="home.html">Home</a></li>
@@ -35,7 +33,6 @@
     </header>
     <main>
       <div class="container">
-        
         <section class="editor-hero reveal">
           <h1>Page Editor — Student 2</h1>
           <p>
@@ -49,7 +46,6 @@
         </section>
 
         <div class="editor-layout">
-         
           <aside class="editor-nav reveal">
             <h2>Contents</h2>
             <ul>
@@ -69,7 +65,6 @@
           </aside>
 
           <div class="editor-main">
-            
             <section id="student-role" class="editor-section reveal">
               <h2>Student Name and Role</h2>
               <p><strong>Name:</strong> Ravindu Nimesh 20244067</p>
@@ -120,9 +115,8 @@
                 <a href="/html/content_ST2.html" target="_blank"
                   >View Content Page</a
                 >
-                <a href="/html/validation_ST2.html" target="_blank"
-                  >View Validation Page</a
-                >
+                <a href="/html/validation_ST2.html">View Validation Page</a>
+                <a href="#" target="_blank">View Page Editor Page</a>
               </div>
               <p>
                 These pages represent my complete individual contribution to the
@@ -148,7 +142,7 @@
 
               <h3>CSS Techniques</h3>
               <p>
-                I used embedded CSS to create a full-screen background with a
+                I used external CSS to create a full-screen background with a
                 dark green overlay, a fade-in animation on the title and button
                 using <code>@keyframes</code>, and a smooth hover effect on the
                 enter button. I used <code>100%</code> to make the page fill the
@@ -160,7 +154,8 @@
                 The splash screen was designed to make a strong first impression
                 while staying visually consistent with the green environmental
                 theme. I kept the layout minimal so users are immediately drawn
-                to the enter button. A small count down timer sends the user to
+                to the "Skip Intro" button. A small count down timer sends the
+                user to
                 <code>home.html</code> when the button is clicked.
               </p>
             </section>
@@ -204,7 +199,7 @@
                 </li>
               </ul>
 
-              <h3>Design and Implementation Rationale</h3>
+              <h3>Design and Implementation Rational</h3>
               <p>
                 I can chose a 6-column so all action cards display clearly
                 without excessive scrolling. The dark blurred forest background
@@ -222,19 +217,21 @@
               <h3>HTML Structure</h3>
               <p>
                 My content page (<code>content_ST2.html</code>) covers Life on
-                Land across six sections: Introduction, Importance of Trees,
-                Role of Animals, How Plants Help, Human Action, and Conclusion.
-                I used a two-column layout with a sticky sidebar on the left and
-                the main article content on the right. Each section has a unique
+                Land across six sections: Introduction, What is Agroforestry?,
+                Environmental Benefits of Agroforestry, Economical Advantages
+                for farmers, Agroforestry as a solution for deforestration and
+                Conclusion. I used a two-column layout with a sticky sidebar on
+                the left and the main article content on the right. Each section
+                has a unique
                 <code>id</code> so sidebar links can jump directly to it. A
                 "Back to Top" anchor link is provided at the bottom.
               </p>
 
               <h3>CSS Techniques</h3>
               <p>
-                I created a separate <code>Content.css</code> file with all
-                classes prefixed <code>s2-</code> to avoid any conflict with the
-                shared <code>style.css</code>. Key techniques include:
+                I created a separate <code>Content ST2.css</code> file with all
+                classes and id selectors to avoid any conflict with the shared
+                <code>style.css</code>. Key techniques include:
               </p>
               <ul>
                 <li>Flexbox for the two-column sidebar and content layout</li>
@@ -295,8 +292,7 @@
                 uses the same shared HTML structure as all other site pages —
                 global header, navigation, and footer — with
                 <code>style.css</code> for shared styling. All page-specific
-                styles are added in an embedded <code>&lt;style&gt;</code> block
-                in the <code>&lt;head&gt;</code>.
+                styles are added in external css file.
               </p>
               <p>
                 The layout uses CSS Grid with a sticky sidebar contents list on
@@ -322,10 +318,9 @@
                 and 1 column on mobile.
               </p>
               <p>
-                On the content page, using the <code>s2-</code> prefix on every
-                CSS class was essential to prevent conflicts with the shared
-                stylesheet. This taught me the importance of clear naming
-                conventions in team projects.
+                On the content page, used external css file to style specific
+                styles on current page. This taught me the importance of clear
+                naming conventions in team projects.
               </p>
               <p>From this project I learned:</p>
               <ul>
@@ -359,9 +354,9 @@
                 meaningful <code>alt</code> text.
               </p>
               <p>
-                On the content page, the sticky sidebar uses an
-                <code> flex: 1;</code> attribute to identify it as page section
-                navigation. A "Back to Top" link through golable js file.
+                On the content page, the sticky sidebar uses an attribute to
+                identify it as page section navigation. A "Back to Top" link
+                through golable js file.
               </p>
               <p>I also applied the following practices across my pages:</p>
               <ul>
@@ -400,7 +395,6 @@
                 line with JANET compliance guidance for educational
                 institutions.
               </p>
-             
             </section>
 
             <section id="meetings-log" class="editor-section reveal">
@@ -434,7 +428,9 @@
                       <td>2</td>
                       <td>18 Feb 2026, 9:00 PM-9.30PM</td>
                       <td>Online</td>
-                      <td>Desigigning the project and Initial development Planing</td>
+                      <td>
+                        Desigigning the project and Initial development Planing
+                      </td>
                       <td>Yes</td>
                       <td>
                         I suggested a full-screen animated splash screen as the
@@ -446,15 +442,22 @@
                       <td>3</td>
                       <td>28 Feb 2026, 11:00 AM- 12.00 PM</td>
                       <td>Physical</td>
-                      <td>Establishing Repository Structure and Branch Strategy</td>
+                      <td>
+                        Establishing Repository Structure and Branch Strategy
+                      </td>
                       <td>Yes</td>
                       <td>
-                       I participate in the discussion on setting up the centralized Git repository and confirming the platform for version control. I also created the initial folder structure for the project, including separate directories for HTML, CSS, JavaScript, and images, to keep our files organized and maintainable.
+                        I participate in the discussion on setting up the
+                        centralized Git repository and confirming the platform
+                        for version control. I also created the initial folder
+                        structure for the project, including separate
+                        directories for HTML, CSS, JavaScript, and images, to
+                        keep our files organized and maintainable.
                       </td>
                     </tr>
                     <tr>
                       <td>4</td>
-                      <td>27 Feb 2026, 11:00 PM-12.00 PM </td>
+                      <td>27 Feb 2026, 11:00 PM-12.00 PM</td>
                       <td>Physical</td>
                       <td>Review progress on assigned pages</td>
                       <td>Yes</td>
@@ -471,9 +474,10 @@
                       <td>Check page integration and internal links</td>
                       <td>Yes</td>
                       <td>
-                        I tested the actiona stimulator page with card that functionong with java script. Verified the
-                        content page sticky sidebar links, and confirmed my
-                        pages correctly used the shared header and footer.
+                        I tested the actiona stimulator page with card that
+                        functionong with java script. Verified the content page
+                        sticky sidebar links, and confirmed my pages correctly
+                        used the shared header and footer.
                       </td>
                     </tr>
                     <tr>
@@ -485,7 +489,8 @@
                       <td>
                         I ran W3C validation on all five of my pages, recorded
                         screenshots for my validation page, and completed final
-                        content and styling fixes ready for submission.Check with all git hub branches merge with main branch.
+                        content and styling fixes ready for submission.Check
+                        with all git hub branches merge with main branch.
                       </td>
                     </tr>
                   </tbody>
@@ -522,11 +527,8 @@
               </ul>
             </section>
           </div>
-         
         </div>
-        <!-- editor-layout -->
       </div>
-      <!-- container -->
 
       <p class="top"><a href="#top">Go to Top</a></p>
     </main>
