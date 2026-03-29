@@ -11,30 +11,30 @@ function runStep(stepNumber) {
         let ans1 = prompt("What's your name ?", userProfile.step1.name);
         if (ans1 !== null) userProfile.step1.name = ans1.trim();
 
-        let ans2 = prompt("What university you attend ?", userProfile.step1.uni);
+        let ans2 = prompt("What is your current field of study ?", userProfile.step1.uni);
         if (ans2 !== null) userProfile.step1.uni = ans2.trimEnd();
 
-        let ans3 = prompt("Whare are you located ?", userProfile.step1.location);
+        let ans3 = prompt("Where are you located ?", userProfile.step1.location);
         if (ans3 !== null) userProfile.step1.location = ans3.trim();
     }
     else if (stepNumber === 2) {
-        let ans1 = prompt("Type your favourite nature reserve ?", userProfile.step2.reserve);
+        let ans1 = prompt("How aware are you of the impact of nature pollution? ?", userProfile.step2.reserve);
         if (ans1 !== null) userProfile.step2.reserve = ans1.trim();
 
-        let ans2 = prompt("Type your prefered conversation activity ?", userProfile.step2.activity);
+        let ans2 = prompt("Hours per week willing to volunteer ?", userProfile.step2.activity);
         if (ans2 !== null) userProfile.step2.activity = ans2.trim();
 
-        let ans3 = prompt("Hours per week willing to volunteer ?", userProfile.step2.hours);
+        let ans3 = prompt("What aspect of "Life on Land" do you care about the most? (e.g., Healthy soil, planting trees, protecting wildlife)", userProfile.step2.hours);
         if (ans3 !== null) userProfile.step2.hours = ans3.trim();
     }
     else if (stepNumber === 3) {
-        let ans1 = prompt("hat is your main conservation goal ?", userProfile.step3.goal);
+        let ans1 = prompt("What is one action you are willing to take to reduce tech waste ?", userProfile.step3.goal);
         if (ans1 !== null) userProfile.step3.goal = ans1.trim();
 
-        let ans2 = prompt("ill you pledge to plant one tree this year? (Yes/No)", userProfile.step3.pledge);
+        let ans2 = prompt("Would you be interested in joining a local campus e-waste recycling drive? (Yes / No)", userProfile.step3.pledge);
         if (ans2 !== null) userProfile.step3.pledge = ans2.trim();
 
-        let ans3 = prompt("Do you have a business or brand that could support this?", userProfile.step3.brand);
+        let ans3 = prompt("What is your prefered sustainability goal for this year ?", userProfile.step3.brand);
         if (ans3 !== null) userProfile.step3.brand = ans3.trim();
     }
 
