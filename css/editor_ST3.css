@@ -1,6 +1,13 @@
+@import url(global.css);
+
 /* Page background */
 body {
     background-color: #f4f7f1;
+}
+
+/* Main page wrapper */
+.editor-page {
+    padding: 2rem;
 }
 
 /* Table styling */
@@ -8,7 +15,7 @@ th,
 td {
     padding: 0.75rem;
     text-align: left;
-    border: #1B4332 solid 1px;
+    border: 1px solid #1B4332;
 }
 
 /* Hero section */
@@ -20,7 +27,7 @@ td {
     margin-bottom: 2rem;
 }
 
-.editor-hero h1 {
+.editor-hero h2 {
     color: #ffffff;
     margin-bottom: 0.8rem;
 }
@@ -33,7 +40,7 @@ td {
     align-items: start;
 }
 
-/* Sidebar + Sections */
+/* Sidebar and sections */
 .editor-nav,
 .editor-section {
     background-color: #ffffff;
@@ -48,7 +55,14 @@ td {
     top: 20px;
 }
 
+.editor-nav h2 {
+    margin-bottom: 1rem;
+    color: #1B4332;
+}
+
 .editor-nav ul {
+    list-style: none;
+    padding-left: 0;
     margin-bottom: 0;
 }
 
@@ -56,7 +70,19 @@ td {
     margin-bottom: 0.6rem;
 }
 
-/* Main content container */
+.editor-nav a {
+    color: #2E7D32;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.editor-nav a:hover,
+.editor-nav a:focus {
+    color: #1B4332;
+    text-decoration: underline;
+}
+
+/* Main content */
 .editor-main {
     display: grid;
     gap: 1.5rem;
@@ -67,13 +93,21 @@ td {
     border-bottom: 2px solid #95D5B2;
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
+    color: #1B4332;
 }
 
 .editor-section h3 {
     margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: #2E7D32;
 }
 
-/* Quick link buttons */
+.editor-section p,
+.editor-section li {
+    line-height: 1.6;
+}
+
+/* Quick links */
 .quick-links {
     display: flex;
     flex-wrap: wrap;
@@ -155,6 +189,9 @@ code {
 
 /* Responsive layout */
 @media (max-width: 900px) {
+    .editor-page {
+        padding: 1rem;
+    }
 
     .editor-layout {
         grid-template-columns: 1fr;
