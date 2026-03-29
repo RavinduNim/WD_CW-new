@@ -2,7 +2,7 @@
 let total = 0;
 
 // Initialize background on page load
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   updateBackground();
 });
 
@@ -22,9 +22,9 @@ function selectCard(card, points) {
   }
 
   const levelBackgrounds = {
-    Low: "url('/images/barren-land.jpg')",
-    Medium: "url('/images/growing-forest.jpg')",
-    High: "url('/images/thriving-ecosystem.jpeg')",
+    Low: "url('/images/ais/barren-land.jpg')",
+    Medium: "url('/images/ais/growing-forest.jpg')",
+    High: "url('/images/ais/thriving-ecosystem.jpeg')",
   };
 
   // update total points on screen
