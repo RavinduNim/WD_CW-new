@@ -1,13 +1,16 @@
-let secondsLeft =3 ;                                                        
-const countdownElement = document.getElementById("countdown-text");
+let secondsLeft = 3;
 
-const countdownInterval = setInterval(() => {
-  secondsLeft--;
+function countdown() {
+  secondsLeft = secondsLeft - 1;
+
   if (secondsLeft >= 0) {
-    countdownElement.textContent = `Entering site in ${secondsLeft}...`;
+    document.getElementById("countdown-text").innerHTML =
+      "Entering site in " + secondsLeft + "...";
   }
 
   if (secondsLeft <= 0) {
-    clearInterval(countdownInterval);
+    clearInterval(timer);
   }
-}, 1000);
+}
+
+let timer = setInterval(countdown, 1000);
