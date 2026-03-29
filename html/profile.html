@@ -1,103 +1,105 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <title>User Profile | Protect Life on Land</title>
-    <link rel="stylesheet" href="/css/global.css"/>
-    <link rel="stylesheet" href="/css/profile.css"/>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <body>
-    <header>
-      <div class="logo-area">
-        <img src="/images/logo.png" alt="Protect Life on Land logo"/>
-        <div>
-          <h1>Protect Life on Land</h1>
-          <p>Practical action for forests, wildlife, and ecosystems</p>
-        </div>
+  <title>User Profile | Protect Life on Land</title>
+  <link rel="stylesheet" href="/css/global.css" />
+  <link rel="stylesheet" href="/css/profile.css" />
+</head>
+
+<body>
+  <header>
+    <div class="logo-area">
+      <img src="/images/logo.png" alt="Protect Life on Land logo" />
+      <div>
+        <h1>Protect Life on Land</h1>
+        <p>Practical action for forests, wildlife, and ecosystems</p>
+      </div>
+    </div>
+
+    <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="ais.html">Action Simulator</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="profile.html" class="active">User Profile</a></li>
+        <li><a href="sitemap.html">Sitemap</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="profileContainer">
+      <h2>Progressive User Profile</h2>
+      <p class="boxText">
+        Complete the below steps to built your profile. Yoy can skip prompts
+        and fill it again.
+      </p>
+
+      <div class="progressWrapper">
+        <div id="progressBar" class="progressBar">0%</div>
+      </div>
+      <p id="progressText">Step 0 of 3 completed.</p>
+
+      <div class="controls">
+        <button class="btn" onclick="runStep(1)">
+          Start / Edit Step 1: Basics
+        </button>
+        <button class="btn" onclick="runStep(2)">
+          Start / Edit Step 2: Interests
+        </button>
+        <button class="btn" onclick="runStep(3)">
+          Start / Edit Step 3: Commitments
+        </button>
       </div>
 
-      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
-
-      <nav aria-label="Main navigation">
-        <ul class="nav-links">
-          <li><a href="home.html">Home</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="ais.html">Action Simulator</a></li>
-          <li><a href="feedback.html">Feedback</a></li>
-          <li><a href="team.html">Team</a></li>
-          <li><a href="profile.html" class="active">User Profile</a></li>
-          <li><a href="sitemap.html">Sitemap</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <main>
-      <div class="profileContainer">
-        <h2>Progressive User Profile</h2>
-        <p class="boxText">
-          Complete the below steps to built your profile. Yoy can skip prompts
-          and fill it again.
-        </p>
-
-        <div class="progressWrapper">
-          <div id="progressBar" class="progressBar">0%</div>
-        </div>
-        <p id="progressText">Step 0 of 3 completed.</p>
-
-        <div class="controls">
-          <button class="btn" onclick="runStep(1)">
-            Start / Edit Step 1: Basics
-          </button>
-          <button class="btn" onclick="runStep(2)">
-            Start / Edit Step 2: Basics
-          </button>
-          <button class="btn" onclick="runStep(3)">
-            Start / Edit Step 3: Basics
-          </button>
+      <div id="profileOutput">
+        <div id="cardStep1" class="profileCard">
+          <h3>Step 1: Basics</h3>
+          <div id="outName" class="dataRow"></div>
+          <div id="outUni" class="dataRow"></div>
+          <div id="outLocation" class="dataRow"></div>
         </div>
 
-        <div id="profileOutput">
-          <div id="cardStep1" class="profileCard">
-            <h3>Step 1: Basics</h3>
-            <div id="outName" class="dataRow"></div>
-            <div id="outUni" class="dataRow"></div>
-            <div id="outLocation" class="dataRow"></div>
-          </div>
+        <div id="cardStep2" class="profileCard">
+          <h3>Step 2: Interests</h3>
+          <div id="outReserve" class="dataRow"></div>
+          <div id="outActivity" class="dataRow"></div>
+          <div id="outHours" class="dataRow"></div>
+        </div>
 
-          <div id="cardStep2" class="profileCard">
-            <h3>Step 2: Interests</h3>
-            <div id="outReserve" class="dataRow"></div>
-            <div id="outActivity" class="dataRow"></div>
-            <div id="outHours" class="dataRow"></div>
-          </div>
-
-          <div id="cardStep3" class="profileCard">
-            <h3>Step 3: Commitments</h3>
-            <div id="outGoal" class="dataRow"></div>
-            <div id="outPledge" class="dataRow"></div>
-            <div id="outBrand" class="dataRow"></div>
-          </div>
+        <div id="cardStep3" class="profileCard">
+          <h3>Step 3: Commitments</h3>
+          <div id="outGoal" class="dataRow"></div>
+          <div id="outPledge" class="dataRow"></div>
+          <div id="outBrand" class="dataRow"></div>
         </div>
       </div>
-    </main>
+    </div>
+  </main>
 
-    <footer>
-      <div class="student-editors">
-        <h3>Page Editors</h3>
-        <ul>
-          <li><a href="/html/editor_ST1.html">Student 1</a></li>
-          <li><a href="/html/editor_ST2.html">Student 2</a></li>
-          <li><a href="/html/editor_ST3.html">Student 3</a></li>
-          <li><a href="/html/editor_ST4.html">Student 4</a></li>
-        </ul>
-      </div>
-      <p>&copy; 2026 Protect Life on Land | GREEN Team</p>
-    </footer>
+  <footer>
+    <div class="student-editors">
+      <h3>Page Editors</h3>
+      <ul>
+        <li><a href="/html/editor_ST1.html">Student 1</a></li>
+        <li><a href="/html/editor_ST2.html">Student 2</a></li>
+        <li><a href="/html/editor_ST3.html">Student 3</a></li>
+        <li><a href="/html/editor_ST4.html">Student 4</a></li>
+      </ul>
+    </div>
+    <p>&copy; 2026 Protect Life on Land | GREEN Team</p>
+  </footer>
 
-    <script src="/js/global.js"></script>
-    <script src="/js/profile.js"></script>
-  </body>
+  <script src="/js/global.js"></script>
+  <script src="/js/profile.js"></script>
+</body>
+
 </html>

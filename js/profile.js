@@ -24,7 +24,7 @@ function runStep(stepNumber) {
         let ans2 = prompt("Hours per week willing to volunteer ?", userProfile.step2.activity);
         if (ans2 !== null) userProfile.step2.activity = ans2.trim();
 
-        let ans3 = prompt("What aspect of "Life on Land" do you care about the most? (e.g., Healthy soil, planting trees, protecting wildlife)", userProfile.step2.hours);
+        let ans3 = prompt("What aspect of 'Life on Land' do you care about the most? (e.g., Healthy soil, planting trees, protecting wildlife)", userProfile.step2.hours);
         if (ans3 !== null) userProfile.step2.hours = ans3.trim();
     }
     else if (stepNumber === 3) {
