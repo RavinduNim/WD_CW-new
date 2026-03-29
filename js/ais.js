@@ -52,7 +52,7 @@ function updateBackground(backgroundUrl) {
   // Apply background image with white transparent overlay
   document.body.style.backgroundImage =
     "linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), " +
-    (backgroundUrl || "url('/images/barren-land.jpg')");
+    (backgroundUrl || "url('/images/ais/barren-land.jpg')");
   document.body.style.backgroundSize = "cover";
   document.body.style.backgroundPosition = "center";
 }
